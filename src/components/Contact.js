@@ -75,7 +75,7 @@ const Contact = () => {
             scrolling="no"
             loading="lazy"
             // src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=NewTelco+GmbH+Frankfurt&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfTocZrSHu4H632Js_6tgoWG8IGElGer8&q=NewTelco+GmbH+Frankfurt"
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=NewTelco+GmbH+Frankfurt`}
             style={{ filter: "grayscale(1) contrast(1.2) opacity(0.16)" }}
           ></iframe>
           <div className="bg-gray-900 relative flex flex-wrap py-6 rounded-md lg:w-2/3">
