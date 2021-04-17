@@ -10,19 +10,19 @@ const Header = () => {
           className="flex title-font font-medium items-center text-white mb-4 md:mb-0 focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
         >
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
-            <Image
+            {/* <Image
               src="/img/nt-white.webp"
               height="32"
               width="32"
               layout="fixed"
               alt="Newtelco Logo"
-            />
+            /> */}
           </div>
-          <span className="ml-3 text-xl font-thin">NewTelco GmbH</span>
+          <span className="ml-3 text-xl font-thin">Main RZ</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
         <a
-          href="https://newtelco.com"
+          href="#"
           className="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded hidden md:inline-flex"
         >
           <button

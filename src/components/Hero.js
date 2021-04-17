@@ -4,28 +4,9 @@ import Image from "next/image"
 import ContactModal from "./ContactModal"
 import { useKeyPressEvent } from "react-use"
 
-const client = require("contentful").createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-})
-
-const Hero = () => {
-  const [heroText, setHeroText] = useState({})
+const Hero = ({ content }) => {
+  const { Title, Subtitle, ctaButtonLabel } = content
   const [openModal, setOpenModal] = useState(false)
-
-  async function fetchHero() {
-    const entries = await client.getEntry("4NtJeBncecmyvJi4OrY0w")
-    if (entries.fields) return entries.fields
-    console.log(`Error getting Entries for ${entries.sys.type}.`)
-  }
-
-  useEffect(() => {
-    async function getFields() {
-      const heroItems = await fetchHero()
-      heroItems.title && setHeroText(heroItems)
-    }
-    getFields()
-  }, [])
 
   const toggleModal = (val) => {
     setOpenModal(val)
@@ -45,42 +26,38 @@ const Hero = () => {
         <div className="container mx-auto mb-20 flex px-5 pt-4 md:pt-16 md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mx-auto relative">
             <Image
-              className="object-cover object-center rounded filter-jens motion-safe:animate-fadeIn"
+              className="object-cover rounded-xl motion-safe:animate-fadeIn"
               alt="hero"
-              layout="intrinsic"
+              // layout="intrinsic"
               priority
-              loading="eager"
+              quality="100"
               width="480"
               height="600"
-              src="/img/jleuchters-transparent.webp"
+              src="/img/racks1.jpg"
+              // src="/img/jleuchters-transparent.webp"
             />
-            <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div>
-            <div className="mt-2 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
+            {/* <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div> */}
+            {/* <div className="mt-2 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
               <h2 className="text-3xl text-gray-200 font-semibold">
                 Jens Leuchters
               </h2>
               <h3 className="text-xl text-gray-200 font-thin">
                 Managing Director
               </h3>
-            </div>
+            </div> */}
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center mt-20 md:mt-0">
             <h1 className="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
-              {heroText.title}
+              {Title}
             </h1>
             <div className="mb-8 leading-relaxed max-w-2xl">
-              <div className="text-gray-400 underline-magic">
-                {heroText.subtitle && heroText.subtitle.split(".")[0]}.
-              </div>
-              <div className="text-gray-400 mt-2">
-                {heroText.subtitle && heroText.subtitle.split(".")[1]}
-              </div>
+              <div className="text-gray-400 text-2xl font-thin">{Subtitle}</div>
             </div>
             <button
               className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
               onClick={() => toggleModal(true)}
             >
-              {heroText.ctaButton1}
+              {ctaButtonLabel}
             </button>
           </div>
         </div>

@@ -106,35 +106,29 @@ const ContactModal = ({ toggleModal }) => {
         <div className="flex md:ml-auto w-full ">
           <div className="w-1/2 bg-gray-200 p-12 rounded-l-lg hidden lg:flex flex-col justify-around">
             <Image
-              src="/img/newtelco_logo.webp"
-              height="63"
+              src="/img/server2.jpg"
+              height="900"
               width="512"
-              layout="intrinsic"
-              className="max-w-md"
+              layout="responsive"
+              className="max-w-md rounded-lg opacity-80 filter grayscale"
               style={{ maxWidth: "276px" }}
-            />
-            <Image
-              src="/img/servers.webp"
-              height="437"
-              width="400"
-              layout="intrinsic"
             />
           </div>
           <div className="mx-auto w-5/6 p-8 lg:w-1/2 lg:p-8 flex flex-col justify-around">
-            <h2 className="text-gray-700 text-xl md:text-md mr-4 mb-3 font-semibold title-font">
-              Erhalten Sie eine kostenlose Beratung von Jens Leuchters
+            <h2 className="text-gray-700 text-center text-xl md:text-md mr-4 mb-3 font-semibold title-font">
+              Contact us for a free consultation
             </h2>
             <p className="mb-2 text-gray-700 text-center font-thin">
-              Rufen sie uns unter{" "}
+              Call us at{" "}
               <a
-                alt="Call Jens Leuchters"
-                href="tel:00496975002770"
+                alt="Call Main RZ"
+                href="tel:00496975002720"
                 className="text-newtelco-500 font-bold"
               >
-                069 75 00 27 70
+                069 75 00 27 20
               </a>{" "}
-              an, oder füllen Sie das Formular aus und wir werden Sie zeitnah
-              kontaktieren!
+              or fill out the contact form below to hear back from our qualified
+              representatives as soon as possible!
             </p>
             <form action="/api/contact" method="post">
               <div className="relative mb-2">
@@ -176,7 +170,7 @@ const ContactModal = ({ toggleModal }) => {
                   htmlFor="email"
                   className="leading-7 text-sm text-gray-700"
                 >
-                  Telefon
+                  Telephone
                 </label>
                 <input
                   type="tel"
@@ -193,7 +187,7 @@ const ContactModal = ({ toggleModal }) => {
                   htmlFor="message"
                   className="leading-7 text-sm text-gray-700"
                 >
-                  Nachricht
+                  Message
                 </label>
                 <textarea
                   id="msg"
@@ -213,17 +207,17 @@ const ContactModal = ({ toggleModal }) => {
                     onChange={() => setAgbAgree(!agbAgree)}
                     className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-200"
                   />
-                  Ich erlaube NewTelco meine persönlichen Daten zu speichern und
-                  zu verarbeiten und stimme den Bestimmungen der{" "}
+                  I hereby allow Main RZ to save and use the above entered
+                  personal data for marketing purposes and agree to the
                   <a
                     href="https://newtelco.com/data-privacy-policy/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
                   >
-                    Datenschutzrichtlinien
-                  </a>{" "}
-                  zu.
+                    {" "}
+                    data privacy policy
+                  </a>
                 </label>
                 <button
                   action="submit"

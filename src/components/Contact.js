@@ -74,13 +74,14 @@ const Contact = () => {
             marginWidth="0"
             scrolling="no"
             loading="lazy"
-            src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=NewTelco+GmbH+Frankfurt&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+            // src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=NewTelco+GmbH+Frankfurt&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfTocZrSHu4H632Js_6tgoWG8IGElGer8&q=NewTelco+GmbH+Frankfurt"
             style={{ filter: "grayscale(1) contrast(1.2) opacity(0.16)" }}
           ></iframe>
           <div className="bg-gray-900 relative flex flex-wrap py-6 rounded-md lg:w-2/3">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-medium text-white tracking-widest text-sm">
-                ADRESSE
+                ADDRESS
               </h2>
               <a
                 href="https://g.page/Newtelco?share"
@@ -107,10 +108,10 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                marketing@newtelco.de
+                marketing@mainrz.de
               </a>
               <h2 className="title-font font-medium text-white tracking-widest text-sm mt-4">
-                TELEFON
+                PHONE
               </h2>
               <p className="leading-relaxed ">
                 <a
@@ -119,7 +120,7 @@ const Contact = () => {
                   href="tel:0049697500270"
                   className="focus:outline-none font-thin focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
                 >
-                  +49 69 75 00 27 70
+                  +49 69 75 00 27 20
                 </a>
               </p>
             </div>
@@ -127,19 +128,19 @@ const Contact = () => {
         </div>
         <div className="lg:w-1/3 md:w-1/2 flex flex-col md:pl-8 md:ml-auto w-full md:py-4 mt-8 md:mt-0">
           <p className="leading-relaxed mb-5 text-gray-400 text-xl font-bold text-center">
-            Erhalten Sie eine kostenlose Beratung von Jens Leuchters
+            Receive a free consultation from one of our expert sales engineers!
           </p>
           <p className="mb-5 text-gray-400 text-center font-thin">
-            Rufen sie uns unter{" "}
+            Call us at{" "}
             <a
               alt="Call Jens Leuchters"
               href="tel:00496975002770"
               className="text-newtelco-500 font-bold"
             >
-              069 75 00 27 70
+              069 75 00 27 20
             </a>{" "}
-            an, oder füllen Sie das Formular aus und wir werden Sie zeitnah
-            kontaktieren!
+            or fill out the contact form below and we will get back to you as
+            soon as possible!
           </p>
           <form action="/api/contact" method="post">
             <div className="relative mb-4">
@@ -176,7 +177,7 @@ const Contact = () => {
                 htmlFor="phone"
                 className="leading-7 text-sm text-gray-400"
               >
-                Telefon
+                Phone
               </label>
               <input
                 type="tel"
@@ -189,7 +190,7 @@ const Contact = () => {
             </div>
             <div className="relative mb-4">
               <label htmlFor="msg" className="leading-7 text-sm text-gray-400">
-                Nachricht
+                Message
               </label>
               <textarea
                 id="msg"
@@ -208,17 +209,17 @@ const Contact = () => {
                   onChange={() => setAgbAgree(!agbAgree)}
                   className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
                 />
-                Ich erlaube NewTelco meine persönlichen Daten zu speichern und
-                zu verarbeiten und stimme den Bestimmungen der{" "}
+                I hereby allow Main RZ to save and use the above entered
+                personal data for marketing purposes and agree to the{" "}
                 <a
                   href="https://newtelco.com/data-privacy-policy/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
                 >
-                  Datenschutzrichtlinien
-                </a>{" "}
-                zu.
+                  data privacy policy
+                </a>
+                .
               </label>
               <div className="flex justify-between mt-4 w-full">
                 <button
@@ -229,7 +230,7 @@ const Contact = () => {
                   }}
                   className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-full"
                 >
-                  Absenden
+                  Send
                 </button>
               </div>
             </div>

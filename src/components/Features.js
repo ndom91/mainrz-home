@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 
-const client = require("contentful").createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-})
+// // const client = require("contentful").createClient({
+//   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+//   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+// })
 
 const Support = () => (
   <svg
@@ -64,19 +64,19 @@ const Flexible = () => (
 
 const Features = () => {
   const [features, setFeatures] = useState([])
-  async function fetchFeatures() {
-    const entries = await client.getEntry("32jrBqN5HwaXxvwaYIff0Y")
-    if (entries.fields) return entries.toPlainObject()
-    console.log(`Error getting Entries for ${entries.sys.type}.`)
-  }
+  // async function fetchFeatures() {
+  //   const entries = await client.getEntry("32jrBqN5HwaXxvwaYIff0Y")
+  //   if (entries.fields) return entries.toPlainObject()
+  //   console.log(`Error getting Entries for ${entries.sys.type}.`)
+  // }
 
-  useEffect(() => {
-    async function getFields() {
-      const feat = await fetchFeatures()
-      setFeatures(feat.fields.features)
-    }
-    getFields()
-  }, [])
+  // useEffect(() => {
+  //   async function getFields() {
+  //     const feat = await fetchFeatures()
+  //     setFeatures(feat.fields.features)
+  //   }
+  //   getFields()
+  // }, [])
 
   return (
     <section className="text-gray-500 body-font">
@@ -84,7 +84,7 @@ const Features = () => {
         <div className="flex flex-wrap w-full mb-20 justify-end">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0 flex flex-col items-end">
             <h1 className="w-full sm:text-3xl text-2xl font-medium title-font mb-2 text-white text-right">
-              Hauptvorteile
+              Advantages
             </h1>
             <div className="h-1 w-20 bg-newtelco-500 rounded"></div>
           </div>

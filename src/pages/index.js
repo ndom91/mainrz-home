@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
-import Player from "../components/Player"
 import Features from "../components/Features"
 import Steps from "../components/Steps"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Banner from "../components/Banner"
+import { fetchAPI } from "../lib/strapi"
 import { useCookie } from "react-use"
 
-function HomePage() {
-  const streamUrl = "radioSpot.mp3"
+const HomePage = ({ global, components }) => {
   const [value, updateCookie, deleteCookie] = useCookie("gdpr-banner-dev")
   const [open, setOpen] = useState(false)
 
@@ -55,23 +54,27 @@ function HomePage() {
     setOpen(false)
   }
 
+  console.log(components)
+
   return (
     <>
-      <SEO title="Newtelco Radio" />
+      <SEO title="MainRZ" />
       <Header />
       {open && <Banner hide={hideBanner} />}
-      <Hero />
-      <Player
-        streamUrl={streamUrl}
-        preloadType="auto"
-        trackTitle="Newtelco HR Radio Spot"
-      />
-      <Features />
+      <Hero content={components?.hero} />
+      <Features content={components?.landingFeatures} />
       <Steps />
       <Contact />
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps(ctx) {
+  const global = await fetchAPI("/globals")
+  const landingComponents = await fetchAPI("/landing-components")
+
+  return { props: { global: global[0], components: landingComponents[0] } }
 }
 
 export default HomePage
