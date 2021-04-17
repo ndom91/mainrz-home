@@ -55,7 +55,7 @@ const Steps = () => {
               ? 'office-img-active'
               : ''
           }`}
-          src='/img/server1.jpg'
+          src='/img/server1.webp'
           alt='Newtelco Office'
           ref={intersectionRef}
         />
@@ -99,7 +99,7 @@ const Steps = () => {
               ? 'office-img-left-active'
               : ''
           }`}
-          src='/img/fibre1.jpg'
+          src='/img/fibre1.webp'
           alt='Newtelco Office'
           ref={intersectionRef2}
         />

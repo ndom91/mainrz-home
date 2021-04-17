@@ -24,7 +24,7 @@ const Hero = ({ content }) => {
         <div className='relative right-0 top-10 sm:absolute sm:w-1/2 lg:w-2/3'>
           <img
             className='absolute z-10 left-0 right-0 p-6 w-full h-full object-cover'
-            src='/img/racks1.jpg'
+            src='/img/racks1.webp'
           />
           <div className='absolute inset-6 -ml-8 mt-20 bg-gray-400'></div>
           <svg

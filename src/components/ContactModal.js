@@ -105,7 +105,7 @@ const ContactModal = ({ toggleModal }) => {
         <div className='flex w-full md:ml-auto'>
           <div className='hidden flex-col justify-around p-12 w-1/2 bg-gray-200 rounded-l-lg lg:flex'>
             <Image
-              src='/img/server2.jpg'
+              src='/img/server2.webp'
               height='900'
               width='512'
               layout='responsive'
