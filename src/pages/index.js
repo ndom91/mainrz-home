@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react"
-import SEO from "../components/SEO"
-import Header from "../components/Header"
-import Hero from "../components/Hero"
-import Features from "../components/Features"
-import Steps from "../components/Steps"
-import Contact from "../components/Contact"
-import Footer from "../components/Footer"
-import Banner from "../components/Banner"
-import { fetchAPI } from "../lib/strapi"
-import { useCookie } from "react-use"
+import React, { useEffect, useState } from 'react'
+import SEO from '../components/SEO'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
+import Features from '../components/Features'
+import Steps from '../components/Steps'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
+import Banner from '../components/Banner'
+import Intro from '../components/CompanyIntro'
+import { fetchAPI } from '../lib/strapi'
+import { useCookie } from 'react-use'
 
 const HomePage = ({ global, components }) => {
-  const [value, updateCookie, deleteCookie] = useCookie("gdpr-banner-dev")
+  const [value, updateCookie] = useCookie('gdpr-banner-dev')
   const [open, setOpen] = useState(false)
 
   const GA4Code = `
@@ -23,13 +24,13 @@ const HomePage = ({ global, components }) => {
   `
 
   const setupGA = () => {
-    const a = document.createElement("script")
-    a.type = "text/javascript"
+    const a = document.createElement('script')
+    a.type = 'text/javascript'
     a.async = true
     a.innerHTML = GA4Code
-    const b = document.createElement("script")
-    b.type = "text/javascript"
-    b.src = "https://www.googletagmanager.com/gtag/js?id=G-G5PLDMEVWF"
+    const b = document.createElement('script')
+    b.type = 'text/javascript'
+    b.src = 'https://www.googletagmanager.com/gtag/js?id=G-G5PLDMEVWF'
     document.head.appendChild(b)
     document.head.appendChild(a)
   }
@@ -44,24 +45,25 @@ const HomePage = ({ global, components }) => {
     }
   }, [])
 
-  const hideBanner = (choice) => {
-    if (choice === "accept") {
+  const hideBanner = choice => {
+    if (choice === 'accept') {
       updateCookie(JSON.stringify({ accepted: true }))
       setupGA()
-    } else if (choice === "decline") {
+    } else if (choice === 'decline') {
       updateCookie(JSON.stringify({ accepted: false }))
     }
     setOpen(false)
   }
 
-  console.log(components)
+  console.log(global, components)
 
   return (
     <>
-      <SEO title="MainRZ" />
+      <SEO title='MainRZ' />
       <Header />
       {open && <Banner hide={hideBanner} />}
       <Hero content={components?.hero} />
+      <Intro />
       <Features content={components?.landingFeatures} />
       <Steps />
       <Contact />
@@ -70,9 +72,9 @@ const HomePage = ({ global, components }) => {
   )
 }
 
-export async function getStaticProps(ctx) {
-  const global = await fetchAPI("/globals")
-  const landingComponents = await fetchAPI("/landing-components")
+export async function getStaticProps() {
+  const global = await fetchAPI('/globals')
+  const landingComponents = await fetchAPI('/landing-components')
 
   return { props: { global: global[0], components: landingComponents[0] } }
 }

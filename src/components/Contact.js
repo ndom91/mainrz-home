@@ -1,18 +1,18 @@
-import React, { useState } from "react"
-import Alert from "./Alert"
+import React, { useState } from 'react'
+import Alert from './Alert'
 
 const Contact = () => {
   const [agbAgree, setAgbAgree] = useState(false)
   const [openSentAlert, setOpenSentAlert] = useState(false)
   const [alert, setAlert] = useState({
-    title: "",
-    body: "",
+    title: '',
+    body: '',
   })
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    msg: "",
+    name: '',
+    email: '',
+    phone: '',
+    msg: '',
   })
 
   const showAlert = (title, body) => {
@@ -26,70 +26,70 @@ const Contact = () => {
     }, 5000)
   }
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = () => {
     if (agbAgree) {
-      fetch("/api/contact", {
-        method: "post",
+      fetch('/api/contact', {
+        method: 'post',
         headers: {
-          "content-type": "application/json",
+          'content-type': 'application/json',
         },
         body: JSON.stringify({
           formData,
         }),
       })
-        .then((res) => res.json())
-        .then((data) => {
+        .then(res => res.json())
+        .then(data => {
           if (data.code === 200) {
             setFormData({
-              name: "",
-              email: "",
-              phone: "",
-              msg: "",
+              name: '',
+              email: '',
+              phone: '',
+              msg: '',
             })
-            showAlert("Success", "Info successfully sent!")
+            showAlert('Success', 'Info successfully sent!')
           } else {
-            showAlert("Error", "Info unsuccessfully sent")
+            showAlert('Error', 'Info unsuccessfully sent')
           }
         })
     } else {
-      showAlert("AGB", "Sie muessen zuerst die AGB's annehmen.")
+      showAlert('AGB', "Sie muessen zuerst die AGB's annehmen.")
     }
   }
 
   return (
-    <section className="text-gray-500 body-font relative">
-      <div className="container px-5 pt-12 pb-24 md:py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden p-10 flex items-end justify-start relative">
+    <section className='body-font relative text-gray-500'>
+      <div className='sm:flex-no-wrap container flex flex-wrap mx-auto pb-24 pt-12 px-5 md:py-24'>
+        <div className='relative flex items-end justify-start p-10 bg-gray-900 rounded-lg overflow-hidden md:w-1/2 lg:w-2/3'>
           <iframe
-            width="100%"
-            height="100%"
-            title="map"
-            className="absolute inset-0"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            scrolling="no"
-            loading="lazy"
+            width='100%'
+            height='100%'
+            title='map'
+            className='absolute inset-0'
+            frameBorder='0'
+            marginHeight='0'
+            marginWidth='0'
+            scrolling='no'
+            loading='lazy'
             // src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=NewTelco+GmbH+Frankfurt&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=NewTelco+GmbH+Frankfurt`}
-            style={{ filter: "grayscale(1) contrast(1.2) opacity(0.16)" }}
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Moenchhofstr24+Frankfurt+am+Main+60326`}
+            style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.16)' }}
           ></iframe>
-          <div className="bg-gray-900 relative flex flex-wrap py-6 rounded-md lg:w-2/3">
-            <div className="lg:w-1/2 px-6">
-              <h2 className="title-font font-medium text-white tracking-widest text-sm">
+          <div className='relative flex flex-wrap py-6 bg-gray-900 rounded-md lg:w-2/3'>
+            <div className='px-6 lg:w-1/2'>
+              <h2 className='title-font text-white text-sm font-medium tracking-widest'>
                 ADDRESS
               </h2>
               <a
-                href="https://g.page/Newtelco?share"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
+                href='https://g.page/Newtelco?share'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
-                <p className="leading-relaxed font-thin">
+                <p className='font-thin leading-relaxed'>
                   Moenchhofstr. 24
                   <br />
                   60326 Frankfurt am Main
@@ -98,27 +98,27 @@ const Contact = () => {
                 </p>
               </a>
             </div>
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-medium text-white tracking-widest text-sm">
+            <div className='mt-4 px-6 lg:mt-0 lg:w-1/2'>
+              <h2 className='title-font text-white text-sm font-medium tracking-widest'>
                 EMAIL
               </h2>
               <a
-                href="mailto:marketing@newtelco.de"
-                className="text-newtelco-500 font-thin leading-relaxed focus:outline-none  focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='mailto:marketing@newtelco.de'
+                className='text-newtelco-500 font-thin leading-relaxed rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 marketing@mainrz.de
               </a>
-              <h2 className="title-font font-medium text-white tracking-widest text-sm mt-4">
+              <h2 className='title-font mt-4 text-white text-sm font-medium tracking-widest'>
                 PHONE
               </h2>
-              <p className="leading-relaxed ">
+              <p className='leading-relaxed'>
                 <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="tel:0049697500270"
-                  className="focus:outline-none font-thin focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='tel:0049697500270'
+                  className='font-thin rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 >
                   +49 69 75 00 27 20
                 </a>
@@ -126,109 +126,109 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 md:w-1/2 flex flex-col md:pl-8 md:ml-auto w-full md:py-4 mt-8 md:mt-0">
-          <p className="leading-relaxed mb-5 text-gray-400 text-xl font-bold text-center">
+        <div className='flex flex-col mt-8 w-full md:ml-auto md:mt-0 md:pl-8 md:py-4 md:w-1/2 lg:w-1/3'>
+          <p className='mb-5 text-center text-gray-400 text-xl font-bold leading-relaxed'>
             Receive a free consultation from one of our expert sales engineers!
           </p>
-          <p className="mb-5 text-gray-400 text-center font-thin">
-            Call us at{" "}
+          <p className='mb-5 text-center text-gray-400 font-thin'>
+            Call us at{' '}
             <a
-              alt="Call Jens Leuchters"
-              href="tel:00496975002770"
-              className="text-newtelco-500 font-bold"
+              alt='Call Jens Leuchters'
+              href='tel:00496975002770'
+              className='text-newtelco-500 font-bold'
             >
               069 75 00 27 20
-            </a>{" "}
+            </a>{' '}
             or fill out the contact form below and we will get back to you as
             soon as possible!
           </p>
-          <form action="/api/contact" method="post">
-            <div className="relative mb-4">
-              <label htmlFor="name" className="leading-7 text-sm text-gray-400">
+          <form action='/api/contact' method='post'>
+            <div className='relative mb-4'>
+              <label htmlFor='name' className='text-gray-400 text-sm leading-7'>
                 Name
               </label>
               <input
-                type="text"
-                id="name"
-                name="name"
+                type='text'
+                id='name'
+                name='name'
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors font-thin"
+                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none transition-colors'
               />
             </div>
-            <div className="relative mb-4">
+            <div className='relative mb-4'>
               <label
-                htmlFor="email"
-                className="leading-7 text-sm text-gray-400"
+                htmlFor='email'
+                className='text-gray-400 text-sm leading-7'
               >
                 Email
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
+                type='email'
+                id='email'
+                name='email'
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors font-thin"
+                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none transition-colors'
               />
             </div>
-            <div className="relative mb-4">
+            <div className='relative mb-4'>
               <label
-                htmlFor="phone"
-                className="leading-7 text-sm text-gray-400"
+                htmlFor='phone'
+                className='text-gray-400 text-sm leading-7'
               >
                 Phone
               </label>
               <input
-                type="tel"
-                id="phone"
-                name="phone"
+                type='tel'
+                id='phone'
+                name='phone'
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors font-thin"
+                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none transition-colors'
               />
             </div>
-            <div className="relative mb-4">
-              <label htmlFor="msg" className="leading-7 text-sm text-gray-400">
+            <div className='relative mb-4'>
+              <label htmlFor='msg' className='text-gray-400 text-sm leading-7'>
                 Message
               </label>
               <textarea
-                id="msg"
-                name="msg"
+                id='msg'
+                name='msg'
                 value={formData.msg}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors font-thin"
+                className='px-3 py-1 w-full h-32 text-gray-100 text-base font-thin leading-6 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none resize-none transition-colors'
               ></textarea>
             </div>
-            <div className="relative flex flex-wrap justify-between">
-              <label htmlFor="agb" className="text-xs text-gray-500">
+            <div className='relative flex flex-wrap justify-between'>
+              <label htmlFor='agb' className='text-gray-500 text-xs'>
                 <input
-                  type="checkbox"
-                  id="agb"
+                  type='checkbox'
+                  id='agb'
                   checked={agbAgree}
                   onChange={() => setAgbAgree(!agbAgree)}
-                  className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
+                  className='form-checkbox focus:ring-offset mr-1 w-4 h-4 text-newtelco-500 bg-gray-400 border-gray-300 rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring'
                 />
                 I hereby allow Main RZ to save and use the above entered
-                personal data for marketing purposes and agree to the{" "}
+                personal data for marketing purposes and agree to the{' '}
                 <a
-                  href="https://newtelco.com/data-privacy-policy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
+                  href='https://newtelco.com/data-privacy-policy/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline-none transitions-all text-newtelco-500 hover:underline rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring'
                 >
                   data privacy policy
                 </a>
                 .
               </label>
-              <div className="flex justify-between mt-4 w-full">
+              <div className='flex justify-between mt-4 w-full'>
                 <button
-                  action="submit"
-                  onClick={(e) => {
+                  action='submit'
+                  onClick={e => {
                     e.preventDefault()
                     handleSubmit()
                   }}
-                  className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-full"
+                  className='px-6 py-3 w-full text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none transition-colors focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 >
                   Send
                 </button>
