@@ -23,10 +23,10 @@ const Hero = ({ content }) => {
         </div>
         <div className='relative right-0 top-10 sm:absolute sm:w-1/2 lg:w-2/3'>
           <img
-            className='absolute z-10 left-0 right-0 p-6 w-full h-full object-cover'
+            className='absolute z-10 left-0 right-0 p-0 w-full h-full object-cover lg:p-6'
             src='/img/racks1.webp'
           />
-          <div className='absolute inset-6 -ml-8 mt-20 bg-gray-400'></div>
+          <div className='absolute inset-0 -ml-8 mt-20 bg-gray-400 lg:inset-6'></div>
           <svg
             className='relative z-20 -ml-16 pt-8'
             xmlns='http://www.w3.org/2000/svg'

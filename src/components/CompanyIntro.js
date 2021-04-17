@@ -3,7 +3,7 @@ import React from 'react'
 const Intro = () => {
   return (
     <section className='body-font mt-60 text-gray-400 lg:mb-36'>
-      <div className='container mx-auto px-5 py-24'>
+      <div className='container mx-auto px-16 py-24 lg:px-5'>
         <div className='flex flex-col items-center mx-auto w-full text-center lg:w-3/4 xl:w-2/3'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -46,10 +46,6 @@ const Intro = () => {
           <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'>
             Read More
           </button>
-          {/* <h2 className='title-font text-white text-sm font-medium tracking-wider'>
-            Matthias Hartmann
-          </h2>
-          <p className='text-gray-500 font-thin'>Managing Director</p> */}
         </div>
       </div>
     </section>

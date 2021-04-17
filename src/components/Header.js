@@ -1,5 +1,4 @@
 import React from 'react'
-// import Image from 'next/image'
 
 const Header = () => {
   return (
@@ -9,15 +8,7 @@ const Header = () => {
           href='#'
           className='title-font flex items-center mb-4 p-2 text-white font-medium rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring md:mb-0'
         >
-          <div className='flex items-center justify-center w-10 h-10 bg-newtelco-500 rounded-full'>
-            {/* <Image
-              src="/img/nt-white.webp"
-              height="32"
-              width="32"
-              layout="fixed"
-              alt="Newtelco Logo"
-            /> */}
-          </div>
+          <div className='flex items-center justify-center w-10 h-10 bg-newtelco-500 rounded-full'></div>
           <span className='ml-3 text-xl font-thin'>MainRZ</span>
         </a>
         <nav className='flex flex-wrap items-center justify-center text-base md:ml-auto'></nav>

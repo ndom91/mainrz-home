@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import { useClickAway } from 'react-use'
+import Image from 'next/image'
 import Alert from './Alert'
 
 const ContactModal = ({ toggleModal }) => {

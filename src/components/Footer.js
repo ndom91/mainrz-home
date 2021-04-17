@@ -1,5 +1,4 @@
 import React from 'react'
-// import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -9,15 +8,7 @@ const Footer = () => {
           href='#'
           className='title-font flex items-center justify-center p-2 text-white font-medium rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring-4 md:justify-start'
         >
-          <div className='flex items-center justify-center w-10 h-10 bg-newtelco-500 rounded-full'>
-            {/* <Image
-              src='/img/nt-white.webp'
-              height='32'
-              width='32'
-              layout='fixed'
-              alt='MainRZ Logo'
-            /> */}
-          </div>
+          <div className='flex items-center justify-center w-10 h-10 bg-newtelco-500 rounded-full'></div>
           <span className='ml-3 text-xl font-thin'>MainRZ</span>
         </a>
         <p className='mt-4 text-gray-600 text-sm sm:ml-4 sm:mt-0 sm:pl-4 sm:py-2 sm:border-l-2 sm:border-gray-800'>

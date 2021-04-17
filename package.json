@@ -1,7 +1,7 @@
 {
   "name": "mainrz-home",
-  "version": "0.7.0",
-  "author": "Nico Domino <ndomino@newtelco.de>",
+  "version": "0.9.0",
+  "author": "Nico Domino <yo@ndo.dev>",
   "description": "MainRZ 2021 Homepage",
   "repository": {
     "type": "git",

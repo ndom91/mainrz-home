@@ -50,7 +50,7 @@ const Steps = () => {
           </a>
         </div>
         <img
-          className={`w-full h-full object-cover object-center rounded-lg pr-8 md:pr-0 md:mt-0 mt-48 office-img ${
+          className={`px-4 lg:mx-0 object-cover rounded-lg pr-8 md:mt-0 mt-24 office-img ${
             intersection && intersection.intersectionRatio
               ? 'office-img-active'
               : ''
@@ -94,7 +94,7 @@ const Steps = () => {
           </a>
         </div>
         <img
-          className={`object-cover rounded-lg office-img-left ${
+          className={`px-4 lg:mx-0 object-cover rounded-lg pl-8 md:mt-0 mt-24 office-img-left ${
             intersection2 && intersection2.intersectionRatio
               ? 'office-img-left-active'
               : ''
