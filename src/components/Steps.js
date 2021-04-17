@@ -1,160 +1,77 @@
-import React from "react"
-import { useIntersection } from "react-use"
+import React from 'react'
+import { useIntersection } from 'react-use'
 
 const Steps = () => {
   const intersectionRef = React.useRef(null)
+  const intersectionRef2 = React.useRef(null)
   const intersection = useIntersection(intersectionRef, {
     root: null,
-    rootMargin: "0px",
+    rootMargin: '0px',
+    threshold: 0.8,
+  })
+  const intersection2 = useIntersection(intersectionRef2, {
+    root: null,
+    rootMargin: '0px',
     threshold: 0.8,
   })
 
   return (
-    <section className="text-gray-500 body-font">
-      <div className="container px-5 py-8 md:py-24 mx-auto flex flex-wrap">
-        <div className="flex flex-wrap w-full mb-20">
-          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
-              Our Steps
-            </h1>
-            <div className="h-1 w-20 bg-newtelco-500 rounded"></div>
-          </div>
+    <section className='mx-auto px-4 py-24 max-w-7xl'>
+      <div className='grid gap-x-10 gap-y-10 grid-cols-1 items-center mb-24 md:gap-x-24 md:gap-y-32 md:grid-cols-2'>
+        <div>
+          <h2 className='mb-4 text-center text-newtelco-500 text-2xl font-extrabold tracking-tight sm:text-left md:text-4xl md:leading-tight'>
+            Clear overview for efficient tracking
+          </h2>
+          <p className='mb-5 text-center text-gray-500 text-base font-light sm:text-left md:text-lg'>
+            Handle your subscriptions and transactions efficiently with the
+            clear overview in Dashboard. Features like the smart search option
+            allow you to quickly find any data you’re looking for.
+          </p>
+          <a
+            href='#'
+            className='btn btn-dark btn-lg w-full text-newtelco-500 sm:w-auto'
+          >
+            Learn More
+          </a>
         </div>
-        <div className="flex flex-wrap w-full">
-          <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-            <div className="flex relative pb-12">
-              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-1 bg-gray-700 pointer-events-none"></div>
-              </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-newtelco-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-md text-white mb-1 tracking-wider">
-                  STEP 1
-                </h2>
-                <p className="leading-relaxed text-xl">Ziele definieren</p>
-              </div>
-            </div>
-            <div className="flex relative pb-12">
-              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-1 bg-gray-700 pointer-events-none"></div>
-              </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-newtelco-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-md text-white mb-1 tracking-wider">
-                  STEP 2
-                </h2>
-                <p className="leading-relaxed text-xl">Einen Plan entwerfen</p>
-              </div>
-            </div>
-            <div className="flex relative pb-12">
-              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-1 bg-gray-700 pointer-events-none"></div>
-              </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-newtelco-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <circle cx="12" cy="5" r="3"></circle>
-                  <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
-                </svg>
-              </div>
-              <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-md text-white mb-1 tracking-wider">
-                  STEP 3
-                </h2>
-                <p className="leading-relaxed text-xl">Ein Projekt umsetzen</p>
-              </div>
-            </div>
-            <div className="flex relative pb-12">
-              <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div className="h-full w-1 bg-gray-700 pointer-events-none"></div>
-              </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-newtelco-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-md text-white mb-1 tracking-wider">
-                  STEP 4
-                </h2>
-                <p className="leading-relaxed text-xl">
-                  Technische Unterstützung
-                </p>
-              </div>
-            </div>
-            <div className="flex relative">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-newtelco-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-              </div>
-              <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-xl text-white tracking-wider">
-                  Keine sorgen für Sie!
-                </h2>
-              </div>
-            </div>
-          </div>
-          <img
-            className={`w-full md:w-1/2 object-cover object-center rounded-lg pr-8 md:pr-0 md:mt-0 mt-48 office-img ${
-              intersection && intersection.intersectionRatio
-                ? "office-img-active"
-                : ""
-            }`}
-            src="/img/server1.jpg"
-            alt="Newtelco Office"
-            ref={intersectionRef}
-          />
+        <img
+          className={`w-full h-full object-cover object-center rounded-lg pr-8 md:pr-0 md:mt-0 mt-48 office-img ${
+            intersection && intersection.intersectionRatio
+              ? 'office-img-active'
+              : ''
+          }`}
+          src='/img/server1.jpg'
+          alt='Newtelco Office'
+          ref={intersectionRef}
+        />
+      </div>
+      <div className='grid flex-col-reverse gap-x-10 gap-y-10 grid-cols-1 items-center md:gap-x-24 md:gap-y-32 md:grid-cols-2'>
+        <div className='order-none md:order-2'>
+          <h2 className='mb-4 text-center text-newtelco-500 text-2xl font-extrabold tracking-tight sm:text-left md:text-4xl md:leading-tight'>
+            Decide how you integrate Payments
+          </h2>
+          <p className='mb-5 text-center text-gray-500 text-base font-light sm:text-left md:text-lg'>
+            Love to code? Next to our ready-made and free plugins you can use
+            our expansive yet simple API; decide how you integrate Payments and
+            build advanced and reliable products yourself from scratch.
+          </p>
+          <a
+            href='#'
+            className='btn btn-dark btn-lg w-full text-newtelco-500 sm:w-auto'
+          >
+            Learn More
+          </a>
         </div>
+        <img
+          className={`object-cover rounded-lg office-img-left ${
+            intersection2 && intersection2.intersectionRatio
+              ? 'office-img-left-active'
+              : ''
+          }`}
+          src='/img/fibre1.jpg'
+          alt='Newtelco Office'
+          ref={intersectionRef2}
+        />
       </div>
     </section>
   )

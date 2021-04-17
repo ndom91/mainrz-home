@@ -1,124 +1,80 @@
-import React, { useEffect, useState } from "react"
+import React from 'react'
 
-// // const client = require("contentful").createClient({
-//   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-//   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-// })
-
-const Support = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    height="64"
-    width="64"
-    stroke="currentColor"
-    className="text-newtelco-500"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-    />
-  </svg>
-)
-
-const Clock = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height="64"
-    width="64"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    className="text-newtelco-500"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-    />
-  </svg>
-)
-
-const Flexible = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    height="64"
-    width="64"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    className="text-newtelco-500"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-    />
-  </svg>
-)
-
-const Features = () => {
-  const [features, setFeatures] = useState([])
-  // async function fetchFeatures() {
-  //   const entries = await client.getEntry("32jrBqN5HwaXxvwaYIff0Y")
-  //   if (entries.fields) return entries.toPlainObject()
-  //   console.log(`Error getting Entries for ${entries.sys.type}.`)
-  // }
-
-  // useEffect(() => {
-  //   async function getFields() {
-  //     const feat = await fetchFeatures()
-  //     setFeatures(feat.fields.features)
-  //   }
-  //   getFields()
-  // }, [])
+const Features = ({ content }) => {
+  console.log(content)
+  const features = content.singleFeature
 
   return (
-    <section className="text-gray-500 body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap w-full mb-20 justify-end">
-          <div className="lg:w-1/2 w-full mb-6 lg:mb-0 flex flex-col items-end">
-            <h1 className="w-full sm:text-3xl text-2xl font-medium title-font mb-2 text-white text-right">
-              Advantages
-            </h1>
-            <div className="h-1 w-20 bg-newtelco-500 rounded"></div>
-          </div>
+    <section className='body-font text-gray-400'>
+      <div className='container flex flex-wrap mx-auto px-5 py-24'>
+        <div className='flex flex-col mb-20 w-full text-center'>
+          <h2 className='title-font mb-1 text-newtelco-500 text-xs font-medium tracking-widest'>
+            MAINRZ
+          </h2>
+          <h1 className='title-font text-white text-2xl font-medium sm:text-3xl'>
+            Products & Services
+          </h1>
         </div>
-        <div className="flex flex-wrap justify-between w-full">
-          {Array.isArray(features) &&
-            features
-              .sort((a, b) => {
-                return a.fields.order - b.fields.order
-              })
-              .map((feature) => {
-                return (
-                  <div
-                    key={feature.fields.title}
-                    className="p-4 md:w-1/3 w-full"
-                  >
-                    <div className="border-4 border-gray-700 bg-gray-700 bg-opacity-50 px-4 py-6 rounded-lg h-full flex flex-col justify-around items-center">
-                      {feature.fields.title === "24/7 Support" ? (
-                        <Support />
-                      ) : feature.fields.title === "Null Aufwand" ? (
-                        <Clock />
+        <div className='flex flex-wrap -m-4'>
+          {features.length &&
+            features.map(feat => (
+              <div key={feat.id} className='p-4 md:w-1/3'>
+                <div className='flex flex-col p-8 h-full bg-gray-800 bg-opacity-60 rounded-lg'>
+                  <div className='flex items-center mb-3'>
+                    <div className='inline-flex flex-shrink-0 items-center justify-center mr-3 w-10 h-10 text-white bg-newtelco-500 rounded-full'>
+                      {feat.icon ? (
+                        <svg
+                          height='18'
+                          width='18'
+                          stroke='currentColor'
+                          className='w-6 h-6 text-white'
+                          dangerouslySetInnerHTML={{ __html: feat.icon }}
+                        />
                       ) : (
-                        <Flexible />
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                          className='w-6 h-6 text-newtelco-500'
+                          aria-hidden='true'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+                          />
+                        </svg>
                       )}
-                      <h2 className="title-font font-thin text-3xl text-white my-4">
-                        {feature.fields.title}
-                      </h2>
-                      <p className="leading-relaxed text-center font-medium">
-                        {feature.fields.body.content[0].content[0].value}
-                      </p>
                     </div>
+                    <h2 className='title-font text-white text-lg font-medium'>
+                      {feat.title}
+                    </h2>
                   </div>
-                )
-              })}
+                  <p className='flex-grow text-base font-thin leading-relaxed'>
+                    {feat.description}
+                  </p>
+                  <a
+                    href='#'
+                    className='group inline-flex items-center mt-3 text-newtelco-500'
+                  >
+                    Learn More
+                    <svg
+                      fill='none'
+                      stroke='currentColor'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      className='ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-500'
+                      viewBox='0 0 24 24'
+                    >
+                      <path d='M5 12h14M12 5l7 7-7 7'></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </section>

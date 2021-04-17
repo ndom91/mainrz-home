@@ -16,11 +16,8 @@ const Hero = ({ content }) => {
             {Subtitle}
           </p>
           <div className='flex self-start mt-4'>
-            <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none'>
+            <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-700 border-0 rounded focus:outline-none transition-colors duration-500'>
               {ctaButtonLabel}
-            </button>
-            <button className='inline-flex ml-4 px-6 py-2 text-white text-lg bg-gray-600 hover:bg-gray-700 border-0 rounded focus:outline-none'>
-              Call
             </button>
           </div>
         </div>

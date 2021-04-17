@@ -26,7 +26,7 @@ const Header = () => {
           className='hidden rounded focus:outline-none focus:ring-white focus:ring-opacity-70 focus:ring md:inline-flex'
         >
           <button
-            className='inline-flex items-center mt-4 px-3 py-1 text-white text-base font-medium hover:bg-gray-700 bg-newtelco-500 border-0 rounded focus:outline-none transition-colors duration-500 ease-in-out md:inline-flex md:mt-0'
+            className='inline-flex items-center mt-4 px-3 py-1 text-white text-base font-medium bg-newtelco-500 hover:bg-newtelco-700 border-0 rounded focus:outline-none transition-colors duration-500 ease-in-out md:inline-flex md:mt-0'
             tabIndex='-1'
           >
             <svg
