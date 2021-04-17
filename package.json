@@ -20,6 +20,8 @@
     "react-use": "^17.2.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "@tailwindcss/forms": "^0.3.2",
     "eslint": "^7.24.0",
     "husky": "^6.0.0",
@@ -29,9 +31,15 @@
     "tailwindcss": "^2.1.1"
   },
   "prettier": {
-    "semi": false
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "jsxSingleQuote": true
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended"
   }
 }
