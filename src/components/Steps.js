@@ -16,22 +16,37 @@ const Steps = () => {
   })
 
   return (
-    <section className='mx-auto px-4 py-24 max-w-7xl'>
+    <section className='lg:my-37 mx-auto px-4 py-24 max-w-7xl'>
       <div className='grid gap-x-10 gap-y-10 grid-cols-1 items-center mb-24 md:gap-x-24 md:gap-y-32 md:grid-cols-2'>
         <div>
           <h2 className='mb-4 text-center text-newtelco-500 text-2xl font-extrabold tracking-tight sm:text-left md:text-4xl md:leading-tight'>
-            Clear overview for efficient tracking
+            Focus on Customers
           </h2>
           <p className='mb-5 text-center text-gray-500 text-base font-light sm:text-left md:text-lg'>
-            Handle your subscriptions and transactions efficiently with the
-            clear overview in Dashboard. Features like the smart search option
-            allow you to quickly find any data you’re looking for.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <a
             href='#'
-            className='btn btn-dark btn-lg w-full text-newtelco-500 sm:w-auto'
+            className='group focus:ring-opacity30 inline-flex items-center mt-3 text-newtelco-500 rounded outline-none focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
           >
             Learn More
+            <svg
+              fill='none'
+              stroke='currentColor'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              className='ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-500'
+              viewBox='0 0 24 24'
+            >
+              <path d='M5 12h14M12 5l7 7-7 7'></path>
+            </svg>
           </a>
         </div>
         <img
@@ -48,18 +63,34 @@ const Steps = () => {
       <div className='grid flex-col-reverse gap-x-10 gap-y-10 grid-cols-1 items-center md:gap-x-24 md:gap-y-32 md:grid-cols-2'>
         <div className='order-none md:order-2'>
           <h2 className='mb-4 text-center text-newtelco-500 text-2xl font-extrabold tracking-tight sm:text-left md:text-4xl md:leading-tight'>
-            Decide how you integrate Payments
+            While protecting the environment
           </h2>
           <p className='mb-5 text-center text-gray-500 text-base font-light sm:text-left md:text-lg'>
-            Love to code? Next to our ready-made and free plugins you can use
-            our expansive yet simple API; decide how you integrate Payments and
-            build advanced and reliable products yourself from scratch.
+            Porta nibh venenatis cras sed felis eget. Diam ut venenatis tellus
+            in metus vulputate. Eu facilisis sed odio morbi quis commodo odio
+            aenean sed. Diam maecenas ultricies mi eget mauris pharetra.
+            Faucibus vitae aliquet nec ullamcorper. Cursus turpis massa
+            tincidunt dui ut. Luctus venenatis lectus magna fringilla urna. Dui
+            faucibus in ornare quam viverra. Malesuada proin libero nunc
+            consequat interdum varius sit amet mattis. Faucibus vitae aliquet
+            nec ullamcorper sit amet.
           </p>
           <a
             href='#'
-            className='btn btn-dark btn-lg w-full text-newtelco-500 sm:w-auto'
+            className='group focus:ring-opacity30 inline-flex items-center mt-3 text-newtelco-500 rounded outline-none focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
           >
             Learn More
+            <svg
+              fill='none'
+              stroke='currentColor'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              className='ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-500'
+              viewBox='0 0 24 24'
+            >
+              <path d='M5 12h14M12 5l7 7-7 7'></path>
+            </svg>
           </a>
         </div>
         <img

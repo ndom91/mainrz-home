@@ -4,10 +4,10 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className='body-font text-gray-500 bg-gray-900'>
-      <div className='container flex flex-col items-center mx-auto px-5 py-8 sm:flex-row'>
+      <div className='container flex flex-col items-center mx-auto px-5 py-5 sm:flex-row'>
         <a
           href='#'
-          className='title-font flex items-center justify-center text-white font-medium rounded focus:outline-none focus:ring-white focus:ring-opacity-70 focus:ring md:justify-start'
+          className='title-font flex items-center justify-center p-2 text-white font-medium rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring-4 md:justify-start'
         >
           <div className='flex items-center justify-center w-10 h-10 bg-newtelco-500 rounded-full'>
             {/* <Image
@@ -33,7 +33,7 @@ const Footer = () => {
         </p>
         <span className='inline-flex justify-center mt-4 sm:justify-start sm:ml-auto sm:mt-0'>
           <a
-            className='text-gray-600 hover:text-white rounded focus:outline-none transition transition-colors duration-300 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+            className='text-gray-600 hover:text-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
             href='https://www.facebook.com/mainrz/'
             aria-label='MainRZ Facebook'
           >
@@ -49,7 +49,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className='ml-3 text-gray-600 hover:text-white rounded focus:outline-none transition transition-colors duration-300 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+            className='ml-3 text-gray-600 hover:text-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
             href='https://twitter.com/mainrz'
             aria-label='MainRZ Twitter'
           >
@@ -65,7 +65,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className='ml-3 text-gray-600 hover:text-white rounded focus:outline-none transition transition-colors duration-300 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+            className='ml-3 text-gray-600 hover:text-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
             href='https://www.instagram.com/mainrz/'
             aria-label='MainRZ Instagram'
           >
@@ -83,7 +83,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className='ml-3 text-gray-600 hover:text-white rounded focus:outline-none transition transition-colors duration-300 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+            className='ml-3 text-gray-600 hover:text-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
             href='https://www.linkedin.com/company/mainrz'
             aria-label='MainRZ LinkedIn'
           >

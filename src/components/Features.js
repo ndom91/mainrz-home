@@ -5,7 +5,7 @@ const Features = ({ content }) => {
   const features = content.singleFeature
 
   return (
-    <section className='body-font text-gray-400'>
+    <section className='body-font text-gray-400 lg:my-36'>
       <div className='container flex flex-wrap mx-auto px-5 py-24'>
         <div className='flex flex-col mb-20 w-full text-center'>
           <h2 className='title-font mb-1 text-newtelco-500 text-xs font-medium tracking-widest'>
@@ -57,7 +57,7 @@ const Features = ({ content }) => {
                   </p>
                   <a
                     href='#'
-                    className='group inline-flex items-center mt-3 text-newtelco-500'
+                    className='group inline-flex items-center mt-3 text-newtelco-500 rounded outline-none focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
                   >
                     Learn More
                     <svg

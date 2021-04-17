@@ -61,7 +61,7 @@ const Contact = () => {
   }
 
   return (
-    <section className='body-font relative text-gray-500'>
+    <section className='body-font relative text-gray-500 lg:mt-36'>
       <div className='sm:flex-no-wrap container flex flex-wrap mx-auto pb-24 pt-12 px-5 md:py-24'>
         <div className='relative flex items-end justify-start p-10 bg-gray-900 rounded-lg overflow-hidden md:w-1/2 lg:w-2/3'>
           <iframe
@@ -74,7 +74,6 @@ const Contact = () => {
             marginWidth='0'
             scrolling='no'
             loading='lazy'
-            // src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=NewTelco+GmbH+Frankfurt&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
             src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Moenchhofstr24+Frankfurt+am+Main+60326`}
             style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.16)' }}
           ></iframe>
@@ -87,7 +86,7 @@ const Contact = () => {
                 href='https://g.page/Newtelco?share'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                className='rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
                 <p className='font-thin leading-relaxed'>
                   Moenchhofstr. 24
@@ -104,7 +103,7 @@ const Contact = () => {
               </h2>
               <a
                 href='mailto:marketing@newtelco.de'
-                className='text-newtelco-500 font-thin leading-relaxed rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                className='text-newtelco-500 font-thin leading-relaxed rounded focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -118,7 +117,7 @@ const Contact = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   href='tel:0049697500270'
-                  className='font-thin rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                  className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 >
                   +49 69 75 00 27 20
                 </a>
@@ -135,7 +134,7 @@ const Contact = () => {
             <a
               alt='Call Jens Leuchters'
               href='tel:00496975002770'
-              className='text-newtelco-500 font-bold'
+              className='text-newtelco-500 font-bold rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
               069 75 00 27 20
             </a>{' '}
@@ -153,7 +152,7 @@ const Contact = () => {
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
-                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none transition-colors'
+                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none focus:outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring-4'
               />
             </div>
             <div className='relative mb-4'>
@@ -169,7 +168,7 @@ const Contact = () => {
                 name='email'
                 value={formData.email}
                 onChange={handleChange}
-                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none transition-colors'
+                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none focus:outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring-4'
               />
             </div>
             <div className='relative mb-4'>
@@ -185,7 +184,7 @@ const Contact = () => {
                 name='phone'
                 value={formData.phone}
                 onChange={handleChange}
-                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none transition-colors'
+                className='px-3 py-1 w-full text-gray-100 text-base font-thin leading-8 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none focus:outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring-4'
               />
             </div>
             <div className='relative mb-4'>
@@ -197,17 +196,20 @@ const Contact = () => {
                 name='msg'
                 value={formData.msg}
                 onChange={handleChange}
-                className='px-3 py-1 w-full h-32 text-gray-100 text-base font-thin leading-6 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none resize-none transition-colors'
+                className='px-3 py-1 w-full h-32 text-gray-100 text-base font-thin leading-6 bg-gray-900 border border-gray-700 focus:border-newtelco-500 rounded outline-none focus:outline-none resize-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-20 focus:ring-4'
               ></textarea>
             </div>
             <div className='relative flex flex-wrap justify-between'>
-              <label htmlFor='agb' className='text-gray-500 text-xs'>
+              <label
+                htmlFor='agb'
+                className='text-gray-500 text-xs leading-relaxed'
+              >
                 <input
                   type='checkbox'
                   id='agb'
                   checked={agbAgree}
                   onChange={() => setAgbAgree(!agbAgree)}
-                  className='form-checkbox focus:ring-offset mr-1 w-4 h-4 text-newtelco-500 bg-gray-400 border-gray-300 rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring'
+                  className='form-checkbox focus:ring-offset mr-1 w-4 h-4 text-newtelco-500 bg-gray-400 border-gray-300 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring'
                 />
                 I hereby allow Main RZ to save and use the above entered
                 personal data for marketing purposes and agree to the{' '}
@@ -215,7 +217,7 @@ const Contact = () => {
                   href='https://newtelco.com/data-privacy-policy/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='underline-none transitions-all text-newtelco-500 hover:underline rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring'
+                  className='underline-none transitions-all text-newtelco-500 hover:underline rounded focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring'
                 >
                   data privacy policy
                 </a>
@@ -228,7 +230,7 @@ const Contact = () => {
                     e.preventDefault()
                     handleSubmit()
                   }}
-                  className='px-6 py-3 w-full text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none transition-colors focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                  className='px-6 py-3 w-full text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-4'
                 >
                   Send
                 </button>
