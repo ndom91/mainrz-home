@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Features = ({ content }) => {
-  console.log(content)
   const features = content.singleFeature
 
   return (

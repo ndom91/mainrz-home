@@ -11,7 +11,7 @@ import Intro from '@/components/CompanyIntro'
 import { fetchAPI } from '@/lib/strapi'
 import { useCookie } from 'react-use'
 
-const HomePage = ({ global, components }) => {
+const HomePage = ({ components }) => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
   const [open, setOpen] = useState(false)
 
@@ -54,8 +54,6 @@ const HomePage = ({ global, components }) => {
     }
     setOpen(false)
   }
-
-  console.log(global, components)
 
   return (
     <>
