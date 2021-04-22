@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Features = ({ content }) => {
-  const features = content.singleFeature
+  const features = content.Features
 
   return (
     <section className='body-font text-gray-400 lg:my-36'>
@@ -21,21 +21,23 @@ const Features = ({ content }) => {
                 <div className='flex flex-col p-8 h-full bg-gray-800 bg-opacity-60 rounded-lg'>
                   <div className='flex items-center mb-3'>
                     <div className='inline-flex flex-shrink-0 items-center justify-center mr-3 w-10 h-10 text-white bg-newtelco-500 rounded-full'>
-                      {feat.icon ? (
+                      {feat.Icon ? (
                         <svg
                           height='18'
                           width='18'
                           stroke='currentColor'
-                          className='w-6 h-6 text-white'
-                          dangerouslySetInnerHTML={{ __html: feat.icon }}
+                          className='w-8 h-8 text-white'
+                          dangerouslySetInnerHTML={{ __html: feat.Icon }}
                         />
                       ) : (
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           fill='none'
+                          height='24'
+                          width='24'
                           viewBox='0 0 24 24'
                           stroke='currentColor'
-                          className='w-6 h-6 text-newtelco-500'
+                          className='w-10 h-10 text-newtelco-500'
                           aria-hidden='true'
                         >
                           <path
@@ -48,11 +50,11 @@ const Features = ({ content }) => {
                       )}
                     </div>
                     <h2 className='title-font text-white text-lg font-medium'>
-                      {feat.title}
+                      {feat.Title}
                     </h2>
                   </div>
                   <p className='flex-grow text-base font-thin leading-relaxed'>
-                    {feat.description}
+                    {feat.Description}
                   </p>
                   <a
                     href='#'

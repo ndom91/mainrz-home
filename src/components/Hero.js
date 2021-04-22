@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Hero = ({ content }) => {
-  const { Title, Subtitle, ctaButtonLabel } = content
+  const { Title, Description, ctaButtonLabel } = content
   return (
     <main className='font-montserrat'>
       <div className='container relative flex flex-col mx-auto px-6 sm:flex-row sm:px-12 lg:py-6 xl:py-16'>
@@ -13,7 +13,7 @@ const Hero = ({ content }) => {
             {Title}
           </h1>
           <p className='font-roboto text-gray-500 text-lg font-thin sm:w-2/3 lg:w-1/2'>
-            {Subtitle}
+            {Description}
           </p>
           <div className='flex self-start mt-4'>
             <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-700 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'>

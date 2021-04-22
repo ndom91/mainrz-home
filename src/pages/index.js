@@ -8,29 +8,31 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 import Intro from '@/components/CompanyIntro'
-import { fetchAPI } from '@/lib/strapi'
+import { getStrapiContent } from '@/lib/strapi'
 import { useCookie } from 'react-use'
 
 const HomePage = ({ components }) => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
   const [open, setOpen] = useState(false)
 
-  const GA4Code = `
+  const gaCode = process.env.NEXT_PUBLIC_GOOGLE_ANALYTIC
+
+  const googleAnalytics4Snippet = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-G5PLDMEVWF');
+  gtag('config', '${gaCode}');
   `
 
   const setupGA = () => {
     const a = document.createElement('script')
     a.type = 'text/javascript'
     a.async = true
-    a.innerHTML = GA4Code
+    a.innerHTML = googleAnalytics4Snippet
     const b = document.createElement('script')
     b.type = 'text/javascript'
-    b.src = 'https://www.googletagmanager.com/gtag/js?id=G-G5PLDMEVWF'
+    b.src = `https://www.googletagmanager.com/gtag/js?id=${gaCode}`
     document.head.appendChild(b)
     document.head.appendChild(a)
   }
@@ -60,9 +62,9 @@ const HomePage = ({ components }) => {
       <SEO title='MainRZ' />
       <Header />
       {open && <Banner hide={hideBanner} />}
-      <Hero content={components?.hero} />
-      <Intro />
-      <Features content={components?.landingFeatures} />
+      <Hero content={components?.Hero} />
+      <Intro content={components?.Welcome} />
+      <Features content={components?.Features} />
       <Steps />
       <Contact />
       <Footer />
@@ -71,10 +73,10 @@ const HomePage = ({ components }) => {
 }
 
 export async function getStaticProps() {
-  const global = await fetchAPI('/globals')
-  const landingComponents = await fetchAPI('/landing-components')
+  // const global = await getStrapiContent('globals')
+  const landingComponents = await getStrapiContent('main-rz')
 
-  return { props: { global: global[0], components: landingComponents[0] } }
+  return { props: { components: landingComponents } }
 }
 
 export default HomePage
