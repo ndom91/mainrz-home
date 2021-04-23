@@ -10,6 +10,7 @@ import Banner from '@/components/Banner'
 import Intro from '@/components/CompanyIntro'
 import { getStrapiContent } from '@/lib/strapi'
 import { useCookie } from 'react-use'
+import posthog from 'posthog-js'
 
 const HomePage = ({ components }) => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
@@ -51,6 +52,9 @@ const HomePage = ({ components }) => {
     if (choice === 'accept') {
       updateCookie(JSON.stringify({ accepted: true }))
       setupGA()
+      posthog.init('JISuZcm4Z7k2G2QGUGPW5_0EfoYQtH5L2Nn_kVDDhNw', {
+        api_host: 'https://posthog.newtelco.dev',
+      })
     } else if (choice === 'decline') {
       updateCookie(JSON.stringify({ accepted: false }))
     }
