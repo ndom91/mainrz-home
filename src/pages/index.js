@@ -42,6 +42,9 @@ const HomePage = ({ components }) => {
     if (value && JSON.parse(value)) {
       if (JSON.parse(value).accepted === true) {
         setupGA()
+        posthog.init('JISuZcm4Z7k2G2QGUGPW5_0EfoYQtH5L2Nn_kVDDhNw', {
+          api_host: 'https://posthog.newtelco.dev',
+        })
       }
     } else {
       setOpen(true)
