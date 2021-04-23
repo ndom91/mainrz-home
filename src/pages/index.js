@@ -15,7 +15,7 @@ const HomePage = ({ components }) => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
   const [open, setOpen] = useState(false)
 
-  const gaCode = process.env.NEXT_PUBLIC_GOOGLE_ANALYTIC
+  const gaCode = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
 
   const googleAnalytics4Snippet = `
   window.dataLayer = window.dataLayer || [];
