@@ -9,9 +9,11 @@ const Hero = ({ content }) => {
           <h2 className='text-white text-2xl font-bold tracking-wider uppercase'>
             GRAND OPENING
           </h2>
-          <h1 className='mb-6 mt-4 text-newtelco-500 text-5xl font-black tracking-wider leading-none uppercase lg:text-6xl xl:text-8xl'>
-            {Title}
-          </h1>
+          <img
+            src='/img/mainrz-logo2.png'
+            alt={Title}
+            className='mb-6 mt-4 text-newtelco-500 text-5xl font-black tracking-wider leading-none uppercase lg:text-6xl xl:text-8xl'
+          />
           <p className='font-roboto text-gray-500 text-lg font-thin sm:w-2/3 lg:w-1/2'>
             {Description}
           </p>

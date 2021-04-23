@@ -116,10 +116,10 @@ const Contact = () => {
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
-                  href='tel:0049697500270'
+                  href='tel:00496975002770'
                   className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 >
-                  +49 69 75 00 27 20
+                  +49 69 75 00 27 70
                 </a>
               </p>
             </div>
@@ -136,7 +136,7 @@ const Contact = () => {
               href='tel:00496975002770'
               className='text-newtelco-500 font-bold rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
-              069 75 00 27 20
+              069 75 00 27 70
             </a>{' '}
             or fill out the contact form below and we will get back to you as
             soon as possible!

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import SEO from '@/components/SEO'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import Features from '@/components/Features'
+// import Features from '@/components/Features'
 import Steps from '@/components/Steps'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -71,7 +71,7 @@ const HomePage = ({ components }) => {
       {open && <Banner hide={hideBanner} />}
       <Hero content={components?.Hero} />
       <Intro content={components?.Welcome} />
-      <Features content={components?.Features} />
+      {/* <Features content={components?.Features} /> */}
       <Steps />
       <Contact />
       <Footer />
