@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import WelcomeLetter from './WelcomeLetter'
 
 const Intro = ({ content }) => {
-  const Letter = content.welcomeletter.replace(/\n/g, '<br />')
+  const [open, setOpen] = useState(false)
+
+  const Letter = content.welcomeletter
+    .split('\n\n')
+    .splice(0, 3)
+    .join('<br /><br />')
+
   return (
     <section className='body-font mt-60 text-gray-400 lg:mb-36'>
       <div className='container mx-auto px-16 py-24 lg:px-5'>
@@ -21,11 +28,21 @@ const Intro = ({ content }) => {
             }}
           />
           <div className='inline-block mb-6 mt-8 w-24 h-1 bg-gray-700 rounded-xl'></div>
-          <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'>
+          <button
+            onClick={() => setOpen(true)}
+            className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
+          >
             Read More
           </button>
         </div>
       </div>
+      {open && (
+        <WelcomeLetter
+          content={content.welcomeletter}
+          open={open}
+          close={() => setOpen(false)}
+        />
+      )}
     </section>
   )
 }

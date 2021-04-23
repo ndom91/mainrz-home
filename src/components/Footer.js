@@ -14,10 +14,10 @@ const Footer = () => {
         <p className='mt-4 text-gray-600 text-sm sm:ml-4 sm:mt-0 sm:pl-4 sm:py-2 sm:border-l-2 sm:border-gray-800'>
           © 2021
           <a
-            href='https://github.com/newtelco/mainrz-home'
+            href='https://github.com/ndom91'
             className='ml-1 text-gray-800 rounded focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
             target='_blank'
-            rel='noopener noreferrer'
+            rel='noreferrer'
           >
             ndomino
           </a>

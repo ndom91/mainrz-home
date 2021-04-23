@@ -74,7 +74,7 @@ const Contact = () => {
             marginWidth='0'
             scrolling='no'
             loading='lazy'
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Moenchhofstr24+Frankfurt+am+Main+60326`}
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Am+Kieswerk+12+63791+Karlstein+am+Main`}
             style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.16)' }}
           ></iframe>
           <div className='relative flex flex-wrap py-6 bg-gray-900 rounded-md lg:w-2/3'>
@@ -89,9 +89,9 @@ const Contact = () => {
                 className='rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
                 <p className='font-thin leading-relaxed'>
-                  Moenchhofstr. 24
+                  Am Kieswerk 12
                   <br />
-                  60326 Frankfurt am Main
+                  63791 Karlstein am Main
                   <br />
                   Germany
                 </p>
