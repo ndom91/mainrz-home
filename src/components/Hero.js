@@ -6,9 +6,6 @@ const Hero = ({ content }) => {
     <main className='font-montserrat'>
       <div className='container relative flex flex-col mx-auto px-6 sm:flex-row sm:px-12 lg:py-6 xl:py-16'>
         <div className='relative z-30 pb-8 sm:pb-16 sm:pt-8 sm:w-1/2 lg:pb-32 lg:pt-16'>
-          <h2 className='text-white text-2xl font-bold tracking-wider uppercase'>
-            GRAND OPENING
-          </h2>
           <img
             src='/img/mainrz-logo2.png'
             alt={Title}

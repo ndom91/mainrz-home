@@ -15,7 +15,7 @@ const WelcomeLetter = ({ content, open, close }) => {
   return (
     <div
       style={{ width: '100vw' }}
-      className='hidden-scroller container fixed z-50 left-0 top-0 w-full h-full bg-gray-900 bg-opacity-70 overflow-y-scroll'
+      className='hidden-scroller z-43 fixed z-50 left-0 top-0 w-full h-full bg-gray-900 bg-opacity-70 overflow-y-scroll'
     >
       <div
         ref={ref}
@@ -53,13 +53,7 @@ const WelcomeLetter = ({ content, open, close }) => {
             className='mx-auto font-sans font-light'
             dangerouslySetInnerHTML={{ __html: Letter }}
           />
-          <img
-            className='my-6'
-            width='250px'
-            src='/img/jleuchters_sig3.png'
-            alt='JLeuchters Signature'
-          />
-          <p className='mx-auto font-sans font-light'>Jens Leuchters</p>
+          <p className='mt-8 mx-auto font-sans font-light'>Jens Leuchters</p>
         </div>
       </div>
     </div>

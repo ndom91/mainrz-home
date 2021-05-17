@@ -3,7 +3,7 @@ import SEO from '@/components/SEO'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 // import Features from '@/components/Features'
-import Steps from '@/components/Steps'
+// import Steps from '@/components/Steps'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
@@ -65,7 +65,7 @@ const HomePage = ({ components }) => {
       <Hero content={components?.Hero} />
       <Intro content={components?.Welcome} />
       {/* <Features content={components?.Features} /> */}
-      <Steps />
+      {/* <Steps /> */}
       <Contact />
       <Footer />
     </>
