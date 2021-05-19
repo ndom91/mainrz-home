@@ -11,13 +11,20 @@ const Hero = ({ content }) => {
             alt={Title}
             className='mb-6 mt-4 text-newtelco-500 text-5xl font-black tracking-wider leading-none uppercase lg:text-6xl xl:text-8xl'
           />
-          <p className='font-roboto text-gray-500 text-lg font-thin sm:w-2/3 lg:w-1/2'>
+          <p className='font-roboto text-white text-xl font-thin sm:w-2/3 lg:w-1/2'>
             {Description}
           </p>
           <div className='flex self-start mt-4'>
-            <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-700 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'>
-              {ctaButtonLabel}
-            </button>
+            <a
+              href='mailto:marketing@mainrz.de'
+              target='_blank'
+              alt='Mail to marketing@mainrz.de'
+              rel='noopener noreferer noreferrer'
+            >
+              <button className='inline-flex px-6 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-700 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'>
+                {ctaButtonLabel}
+              </button>
+            </a>
           </div>
         </div>
         <div className='relative right-0 top-10 sm:absolute sm:w-1/2 lg:w-2/3'>
