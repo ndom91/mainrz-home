@@ -7,6 +7,8 @@ import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
+import ContentCard from '@/components/ContentCard'
+import Logos from '@/components/Logos'
 import Intro from '@/components/CompanyIntro'
 import { getStrapiContent } from '@/lib/strapi'
 import { useCookie } from 'react-use'
@@ -64,10 +66,12 @@ const HomePage = ({ components }) => {
       {open && <Banner hide={hideBanner} />}
       <Hero content={components?.Hero} />
       <Intro content={components?.Welcome} />
-      {/* <Features content={components?.Features} /> */}
-      {/* <Steps /> */}
+      <ContentCard />
+      <Logos />
       <Contact />
       <Footer />
+      {/* <Features content={components?.Features} /> */}
+      {/* <Steps /> */}
     </>
   )
 }

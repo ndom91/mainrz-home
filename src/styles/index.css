@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @import './globals.css';
+@import './fonts.css';
 
 #__next,
 body {
@@ -60,4 +61,11 @@ body {
 .hidden-scroller::-webkit-scrollbar-thumb:hover {
   background: #7f7e7e4b;
   cursor: pointer;
+}
+
+.hero-markers li::marker {
+  content: '✓ ';
+  padding-inline-end: 25px;
+  font-size: 20px;
+  color: #67b246;
 }

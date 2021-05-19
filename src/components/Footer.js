@@ -19,7 +19,7 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            ndomino
+            .domino
           </a>
         </p>
         <span className='inline-flex justify-center mt-4 sm:justify-start sm:ml-auto sm:mt-0'>

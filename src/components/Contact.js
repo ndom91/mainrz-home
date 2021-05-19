@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <section className='body-font relative text-gray-500 lg:mt-36'>
       <div className='sm:flex-no-wrap container flex flex-wrap mx-auto pb-24 pt-12 px-5 md:py-24'>
-        <div className='relative flex items-end justify-start p-10 bg-gray-900 rounded-lg overflow-hidden md:w-1/2 lg:w-2/3'>
+        <div className='relative flex items-end justify-start p-10 w-full h-96 bg-gray-900 rounded-lg overflow-hidden md:w-1/2 md:h-auto lg:w-2/3'>
           <iframe
             width='100%'
             height='100%'
@@ -112,28 +112,28 @@ const Contact = () => {
               <h2 className='title-font mt-4 text-white text-sm font-medium tracking-widest'>
                 PHONE
               </h2>
-              <p className='leading-relaxed'>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='tel:00496975002770'
-                  className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
-                >
-                  +49 69 75 00 27 70
-                </a>
-              </p>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='tel:00496975002770'
+                className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+              >
+                +49 69 75 00 27 70
+              </a>
             </div>
           </div>
         </div>
-        <div className='flex flex-col mt-8 w-full md:ml-auto md:mt-0 md:pl-8 md:py-4 md:w-1/2 lg:w-1/3'>
-          <p className='mb-5 text-center text-gray-400 text-xl font-bold leading-relaxed'>
-            Receive a free consultation from one of our expert sales engineers!
+        <div className='flex flex-col align-bottom mt-8 w-full md:ml-auto md:mt-0 md:pl-8 md:w-1/2 lg:w-1/3'>
+          <p className='mb-6 text-center text-gray-400 font-mono text-xl font-thin tracking-widest uppercase'>
+            Receive a free consultation
           </p>
-          <p className='mb-5 text-center text-gray-400 font-thin'>
+          <p className='mb-5 text-gray-400 font-thin'>
             Call us at{' '}
             <a
               alt='Call Jens Leuchters'
               href='tel:00496975002770'
+              target='_blank'
+              rel='noopener noreferrer'
               className='text-newtelco-500 font-bold rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
               069 75 00 27 70
@@ -143,7 +143,10 @@ const Contact = () => {
           </p>
           <form action='/api/contact' method='post'>
             <div className='relative mb-4'>
-              <label htmlFor='name' className='text-gray-400 text-sm leading-7'>
+              <label
+                htmlFor='name'
+                className='text-gray-400 text-sm tracking-widest leading-7 uppercase'
+              >
                 Name
               </label>
               <input
@@ -158,7 +161,7 @@ const Contact = () => {
             <div className='relative mb-4'>
               <label
                 htmlFor='email'
-                className='text-gray-400 text-sm leading-7'
+                className='text-gray-400 text-sm tracking-widest leading-7 uppercase'
               >
                 Email
               </label>
@@ -174,7 +177,7 @@ const Contact = () => {
             <div className='relative mb-4'>
               <label
                 htmlFor='phone'
-                className='text-gray-400 text-sm leading-7'
+                className='text-gray-400 text-sm tracking-widest leading-7 uppercase'
               >
                 Phone
               </label>
@@ -188,7 +191,10 @@ const Contact = () => {
               />
             </div>
             <div className='relative mb-4'>
-              <label htmlFor='msg' className='text-gray-400 text-sm leading-7'>
+              <label
+                htmlFor='msg'
+                className='text-gray-400 text-sm tracking-widest leading-7 uppercase'
+              >
                 Message
               </label>
               <textarea

@@ -12,7 +12,7 @@ const Header = () => {
           <span className='ml-3 text-xl font-thin'>MainRZ</span>
         </a>
         <nav className='flex flex-wrap items-center justify-center text-base md:ml-auto'></nav>
-        <button className='text-light inline-flex items-center mt-4 px-3 py-1 text-white font-medium hover:bg-newtelco-500 border hover:border-newtelco-500 border-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4 md:inline-flex md:mt-0'>
+        {/* <button className='text-light inline-flex items-center mt-4 px-3 py-1 text-white font-medium hover:bg-newtelco-500 border hover:border-newtelco-500 border-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4 md:inline-flex md:mt-0'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -28,7 +28,7 @@ const Header = () => {
             />
           </svg>
           Home
-        </button>
+        </button> */}
       </div>
     </header>
   )
