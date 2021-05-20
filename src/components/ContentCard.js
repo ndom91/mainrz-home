@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useAnimation, motion } from 'framer-motion'
+import { useIntersection } from 'react-use'
 
 const ContentCard = ({ content }) => {
+  const cardRef = useRef()
+  const controls = useAnimation()
+  const intersection = useIntersection(cardRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1,
+  })
+
+  useEffect(() => {
+    if (intersection && intersection.intersectionRatio > 0.3) {
+      controls.start('visible')
+    }
+  }, [controls, intersection])
+
   return (
     <div className='mx-auto my-24 px-4 py-12 sm:max-w-xl md:px-24 md:max-w-full lg:px-8 lg:py-16 lg:max-w-screen-xl'>
-      <div className='flex flex-col max-w-screen-lg bg-gray-900 rounded-lg shadow-2xl overflow-hidden sm:mx-auto lg:flex-row'>
+      <motion.div
+        ref={cardRef}
+        animate={controls}
+        initial='hidden'
+        transition={{ duration: 0.6 }}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -80 },
+        }}
+        className='flex flex-col max-w-screen-lg bg-gray-900 rounded-lg shadow-2xl overflow-hidden sm:mx-auto lg:flex-row'
+      >
         <div className='relative lg:w-1/2'>
           <img
             src={`https://cms.mainrz.de${content?.Picture.url}`}
@@ -37,7 +63,7 @@ const ContentCard = ({ content }) => {
             </button>
           </div> */}
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

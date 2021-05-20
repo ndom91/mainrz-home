@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { useKey, useClickAway, useLockBodyScroll } from 'react-use'
 
 const WelcomeLetter = ({ content, title, open, close }) => {
@@ -13,21 +14,45 @@ const WelcomeLetter = ({ content, title, open, close }) => {
   // Esc to close
   useKey('esc', () => close())
 
+  const background = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+    exit: { opacity: 0 },
+  }
+  const letter = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 200 },
+    exit: { opacity: 0, y: 200 },
+  }
+
   return (
-    <div
+    <motion.div
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      layout
+      variants={background}
+      transition={{ duration: 0.8 }}
       style={{ width: '100vw' }}
       className='hidden-scroller fixed z-50 left-0 top-0 w-full h-full bg-gray-900 bg-opacity-70 overflow-y-scroll'
     >
-      <article
+      <motion.article
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+        variants={letter}
+        transition={{ delay: 0.3, duration: 0.3 }}
         className='relative mx-auto my-12 px-8 py-24 w-5/6 max-w-5xl bg-gray-800 rounded-lg sm:my-24 sm:w-2/3'
         itemID='#'
         ref={ref}
         itemScope
         itemType='http://schema.org/BlogPosting'
       >
-        <button
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
           className='absolute right-6 top-6 flex items-center justify-center w-8 h-8 bg-transparent rounded-full outline-none focus:outline-none transition-all duration-500 focus:ring-newtelco-500 hover:ring-newtelco-500 focus:ring-opacity-25 hover:ring-opacity-25 focus:ring hover:ring-2'
-          onClick={() => close()}
+          onClick={() => setTimeout(() => close(), 300)}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +70,7 @@ const WelcomeLetter = ({ content, title, open, close }) => {
               d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
             />
           </svg>
-        </button>
+        </motion.button>
         <div className='mb-10 mx-auto w-full max-w-2xl text-left md:w-3/4 lg:w-2/3'>
           <div className='mb-6 pb-6 border-b border-gray-200'>
             <h1
@@ -126,8 +151,8 @@ const WelcomeLetter = ({ content, title, open, close }) => {
             dangerouslySetInnerHTML={{ __html: Letter }}
           />
         </div>
-      </article>
-    </div>
+      </motion.article>
+    </motion.div>
   )
 }
 

@@ -1,11 +1,40 @@
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Hero = ({ content }) => {
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
+      },
+    },
+  }
+
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -20 },
+  }
+
   return (
     <main className='font-montserrat'>
       <div className='container flex flex-col items-center mx-auto px-5 py-24 md:flex-row'>
-        <div className='flex flex-col items-center mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-24'>
+        <motion.div
+          initial='hidden'
+          animate='visible'
+          variants={item}
+          transition={{ duration: 1 }}
+          className='flex flex-col items-center mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-20'
+        >
           <p className='text-newtelco-900 inline-block mb-8 px-3 py-1 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
             {content.HeroBadge}
           </p>
@@ -15,13 +44,18 @@ const Hero = ({ content }) => {
             height='94'
             alt={content.Title}
           />
-          <ul className='hero-markers space-y flex flex-col items-start justify-center mt-8 w-full text-gray-400 font-mono text-sm font-light tracking-tight list-inside list-disc'>
-            <li>{content.Checklist.Item1}</li>
-            <li>{content.Checklist.Item2}</li>
-            <li>{content.Checklist.Item3}</li>
-            <li>{content.Checklist.Item4}</li>
-          </ul>
-          <p className='font-base mb-2 mt-8 w-full text-gray-500 font-mono text-sm tracking-tight'>
+          <motion.ul
+            variants={list}
+            initial='hidden'
+            animate='visible'
+            className='hero-markers space-y text-md flex flex-col items-start justify-center mt-8 w-full text-gray-400 font-mono font-light tracking-tight list-inside list-disc'
+          >
+            <motion.li variants={item}>{content.Checklist.Item1}</motion.li>
+            <motion.li variants={item}>{content.Checklist.Item2}</motion.li>
+            <motion.li variants={item}>{content.Checklist.Item3}</motion.li>
+            <motion.li variants={item}>{content.Checklist.Item4}</motion.li>
+          </motion.ul>
+          <p className='font-base text-md mb-2 mt-8 w-full text-gray-500 font-mono tracking-tight'>
             {content.CallToAction}
           </p>
           <div className='flex items-end justify-center mt-4 w-full md:justify-start'>
@@ -40,30 +74,41 @@ const Hero = ({ content }) => {
               </button>
             </a>
           </div>
-        </div>
-        <div className='w-5/6 md:w-1/2 lg:w-full lg:max-w-lg'>
+        </motion.div>
+        <motion.div
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          className='w-5/6 md:w-1/2 lg:w-full lg:max-w-lg'
+        >
           <img
             className='rounded object-cover object-center'
             alt='hero'
             src='/img/absurd_2.png'
           />
-        </div>
+        </motion.div>
       </div>
       <div className='flex justify-center mt-12'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          className='w-8 h-8 text-newtelco-500 cursor-pointer'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke='currentColor'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M19 9l-7 7-7-7'
-          />
-        </svg>
+        <motion.a whileHover={{ scale: 1.2, y: -10 }} href='#letter'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='w-8 h-8 text-newtelco-500 cursor-pointer'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M19 9l-7 7-7-7'
+            />
+          </svg>
+        </motion.a>
       </div>
     </main>
   )

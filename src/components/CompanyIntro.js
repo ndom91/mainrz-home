@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import WelcomeLetter from './WelcomeLetter'
 
 const Intro = ({ content }) => {
@@ -10,7 +11,7 @@ const Intro = ({ content }) => {
     .join('<br /><br />')
 
   return (
-    <section className='body-font mt-36 text-gray-400 lg:mb-36'>
+    <section id='letter' className='body-font mt-36 text-gray-400 lg:mb-36'>
       <div className='container mx-auto px-16 py-24 lg:px-5'>
         <div className='flex flex-col mx-auto lg:w-3/4 xl:w-2/3'>
           <div className='flex justify-start'>
@@ -33,23 +34,26 @@ const Intro = ({ content }) => {
             }}
           />
           <div className='flex justify-center'>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
               onClick={() => setOpen(true)}
               className='flex mt-14 px-14 py-3 text-white text-lg tracking-wide bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
               {content.ButtonLabel}
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
-      {open && (
-        <WelcomeLetter
-          content={content.welcomeletter}
-          title={content.Title}
-          open={open}
-          close={() => setOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {open && (
+          <WelcomeLetter
+            content={content.welcomeletter}
+            title={content.Title}
+            open={open}
+            close={() => setOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   )
 }
