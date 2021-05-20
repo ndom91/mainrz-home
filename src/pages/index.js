@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import SEO from '@/components/SEO'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-// import Features from '@/components/Features'
-// import Steps from '@/components/Steps'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 import ContentCard from '@/components/ContentCard'
-import Logos from '@/components/Logos'
 import Intro from '@/components/CompanyIntro'
 import { getStrapiContent } from '@/lib/strapi'
 import { useCookie } from 'react-use'
+// import Features from '@/components/Features'
+// import Steps from '@/components/Steps'
+// import Logos from '@/components/Logos'
 
 const HomePage = ({ components }) => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
@@ -67,9 +67,9 @@ const HomePage = ({ components }) => {
       <Hero content={components?.Hero} />
       <Intro content={components?.Welcome} />
       <ContentCard />
-      <Logos />
       <Contact />
       <Footer />
+      {/* <Logos /> */}
       {/* <Features content={components?.Features} /> */}
       {/* <Steps /> */}
     </>

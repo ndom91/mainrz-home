@@ -56,7 +56,7 @@ const WelcomeLetter = ({ content, open, close }) => {
               MainRZ - Powered by NewTelco
             </h1>
             <p className='text-gray-500 text-base font-thin'>
-              May 19, 2021 — Written by Jens Leuchters
+              May 19, 2021 — by Jens Leuchters
             </p>
           </div>
           <div className='flex items-center mb-6 space-x-2'>

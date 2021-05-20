@@ -7,11 +7,11 @@ const Hero = ({ content }) => {
     <main className='font-montserrat'>
       <div className='container flex flex-col items-center mx-auto px-5 py-24 md:flex-row'>
         <div className='flex flex-col items-center mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-24'>
-          <p className='text-newtelco-800 inline-block mb-8 px-3 py-1 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
+          <p className='text-newtelco-900 inline-block mb-8 px-3 py-1 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
             Powered by NewTelco
           </p>
           <Image
-            src='/img/mainrz-logo2.png'
+            src='/img/mainrz-logo.png'
             width='500'
             height='94'
             alt={Title}
