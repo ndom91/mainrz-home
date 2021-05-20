@@ -72,14 +72,13 @@ const Faq = () => {
         </svg>
         <div>
           <p className='mb-3 mt-0 text-newtelco-500 font-mono font-light'>
-            What is accessibility?
+            Why in Karlstein?
           </p>
           <p className='text-gray-600'>
-            This article starts off the module with a good look at what
-            accessibility is — this includes what groups of people we need to
-            consider and why, what tools different people use to interact with
-            the web, and how we can make accessibility part of our web
-            development workflow.
+            Karlstein provides great connectivity to Europes internet hub -
+            Frankfurt am Main. Here we can take advantage of both lower
+            operating costs and less expensive utilities, all while preserving
+            the fast service you have come to know and love at NewTelco.
           </p>
         </div>
       </motion.div>
@@ -103,14 +102,15 @@ const Faq = () => {
         </svg>
         <div>
           <p className='mb-3 mt-0 text-newtelco-500 font-mono font-light'>
-            CSS and JavaScript accessibility best practices?
+            What is different about MainRZ?
           </p>
           <p className='text-gray-600'>
-            CSS and JavaScript, when used properly, also have the potential to
-            allow for accessible web experiences, but if misused they can
-            significantly harm accessibility. This article outlines some CSS and
-            JavaScript best practices that should be considered to ensure that
-            even complex content is as accessible as possible.
+            MainRZ is joining the ranks of modern datacenters - computing
+            environments where we place more value on running in a more
+            efficient and climate friendly manner. Become a part of the green
+            datacenter network and enjoy benefits like cheaper renewable energy
+            costs and peace of mind that we are operating in a way that our
+            children and their children will also still have datacenters.
           </p>
         </div>
       </motion.div>
@@ -134,16 +134,14 @@ const Faq = () => {
         </svg>
         <div>
           <p className='mb-3 mt-0 text-newtelco-500 font-mono font-light'>
-            WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?
+            How is the service?
           </p>
           <p className='text-gray-600'>
-            {`Following on from the previous article, sometimes making complex UI
-            controls that involve unsemantic HTML and dynamic JavaScript-updated
-            content can be difficult. WAI-ARIA is a technology that can help
-            with such problems by adding in further semantics that browsers and
-            assistive technologies can recognize and use to let users know what
-            is going on. Here we'll show how to use it at a basic level to
-            improve accessibility.`}
+            We strive to keep the same great level of service we have offered
+            our customers through NewTelco for over 15 years now. Karlstein is
+            only a short 20 minutes car ride away from our headquarters in
+            Frankfurt am Main - so our expert remote hands technicians can be
+            on-site to assist you in any way in no time!
           </p>
         </div>
       </motion.div>
