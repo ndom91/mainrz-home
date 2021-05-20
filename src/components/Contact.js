@@ -63,7 +63,7 @@ const Contact = ({ content }) => {
   return (
     <section className='body-font relative text-gray-500 lg:mt-36'>
       <div className='sm:flex-no-wrap container flex flex-wrap mx-auto pb-24 pt-12 px-5 md:py-24'>
-        <div className='relative flex items-end justify-start p-10 w-full h-96 bg-gray-900 rounded-lg overflow-hidden md:w-1/2 md:h-auto lg:w-2/3'>
+        <div className='relative flex items-end justify-start mx-8 p-10 w-full h-96 bg-gray-900 rounded-lg overflow-hidden md:mx-0 md:w-1/2 md:h-auto lg:w-2/3'>
           <iframe
             width='100%'
             height='100%'
@@ -122,8 +122,8 @@ const Contact = ({ content }) => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col align-bottom mt-8 w-full md:ml-auto md:mt-0 md:pl-8 md:w-1/2 lg:w-1/3'>
-          <p className='mb-6 text-center text-gray-400 font-mono text-xl font-thin tracking-widest uppercase'>
+        <div className='flex flex-col align-bottom mt-8 px-8 w-full md:ml-auto md:mt-0 md:pl-8 md:px-0 md:w-1/2 lg:w-1/3'>
+          <p className='mb-6 text-left text-gray-400 font-mono text-xl font-thin tracking-widest uppercase sm:text-center'>
             {content?.Title}
           </p>
           <p className='mb-5 text-gray-400 font-thin'>

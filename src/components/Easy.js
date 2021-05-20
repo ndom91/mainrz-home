@@ -52,9 +52,9 @@ const Easy = () => {
           animate={controls}
           transition={{ duration: 1 }}
           variants={header}
-          className='mb-8 text-center text-newtelco-500 font-mono text-4xl font-bold'
+          className='mb-8 text-center text-newtelco-500 font-mono text-2xl font-bold sm:text-4xl'
         >
-          Its as easy as 1, 2, 3
+          {`Its as easy as 1, 2, 3`}
         </motion.h1>
         <motion.p
           initial='hidden'
@@ -68,7 +68,7 @@ const Easy = () => {
           animate={controls}
           ref={stepsRef}
           variants={list}
-          className='flex flex-wrap -mb-10 -mt-4 -mx-4 space-y-6 sm:-m-4 md:space-y-0'
+          className='flex flex-wrap -mb-10 -mt-4 -mx-4 space-y-24 sm:-m-4 md:space-y-0'
         >
           <motion.div variants={item} className='flex p-4 md:w-1/3'>
             <div className='relative inline-flex flex-shrink-0 items-center justify-center mb-4 w-12 h-12 text-gray-300 rounded-full pointer-events-none'>

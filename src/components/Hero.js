@@ -33,9 +33,9 @@ const Hero = ({ content }) => {
           animate='visible'
           variants={item}
           transition={{ duration: 1 }}
-          className='flex flex-col items-center mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-20'
+          className='flex flex-col items-start mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-20'
         >
-          <p className='text-newtelco-900 inline-block mb-8 px-3 py-1 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
+          <p className='text-newtelco-900 inline-block self-start mb-8 px-3 py-1 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
             {content.HeroBadge}
           </p>
           <Image
@@ -48,7 +48,7 @@ const Hero = ({ content }) => {
             variants={list}
             initial='hidden'
             animate='visible'
-            className='hero-markers space-y text-md flex flex-col items-start justify-center mt-8 w-full text-gray-400 font-mono font-light tracking-tight list-inside list-disc'
+            className='hero-markers space-y flex flex-col items-start justify-center mt-8 w-full text-left text-gray-400 font-mono text-sm font-light tracking-tight list-inside list-disc md:text-base'
           >
             <motion.li variants={item}>{content.Checklist.Item1}</motion.li>
             <motion.li variants={item}>{content.Checklist.Item2}</motion.li>
@@ -86,7 +86,7 @@ const Hero = ({ content }) => {
           className='w-5/6 md:w-1/2 lg:w-full lg:max-w-lg'
         >
           <img
-            className='rounded object-cover object-center'
+            className='hidden rounded object-cover object-center md:inline-block'
             alt='hero'
             src='/img/absurd_2.png'
           />

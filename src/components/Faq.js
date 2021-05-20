@@ -48,13 +48,13 @@ const Faq = () => {
     >
       <motion.h1
         variants={item}
-        className='mb-12 text-left text-newtelco-500 font-mono text-xl font-bold md:text-center md:text-3xl'
+        className='mb-12 text-center text-newtelco-500 font-mono text-xl font-bold md:text-3xl'
       >
         Frequently Asked Questions
       </motion.h1>
       <motion.div
         variants={item}
-        className='flex items-start justify-start mb-12 px-12'
+        className='flex items-start justify-start mb-12 sm:px-12'
       >
         <svg
           fill='none'
@@ -85,7 +85,7 @@ const Faq = () => {
       </motion.div>
       <motion.div
         variants={item}
-        className='flex items-start justify-start mb-12 px-12'
+        className='flex items-start justify-start mb-12 sm:px-12'
       >
         <svg
           fill='none'
@@ -116,7 +116,7 @@ const Faq = () => {
       </motion.div>
       <motion.div
         variants={item}
-        className='flex items-start justify-start mb-12 px-12'
+        className='flex items-start justify-start mb-12 sm:px-12'
       >
         <svg
           fill='none'
