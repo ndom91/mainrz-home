@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Image from 'next/image'
 import { useKey, useClickAway, useLockBodyScroll } from 'react-use'
 
-const WelcomeLetter = ({ content, open, close }) => {
+const WelcomeLetter = ({ content, title, open, close }) => {
   const Letter = content.replace(/\n/g, '<br />')
   const ref = useRef(null)
   useLockBodyScroll(open)
@@ -53,7 +53,7 @@ const WelcomeLetter = ({ content, open, close }) => {
               itemProp='headline'
               title='Rise of Tailwind - A Utility First CSS Framework'
             >
-              MainRZ - Powered by NewTelco
+              {title}
             </h1>
             <p className='text-gray-500 text-base font-thin'>
               May 19, 2021 — by Jens Leuchters

@@ -37,7 +37,7 @@ const Intro = ({ content }) => {
               onClick={() => setOpen(true)}
               className='flex mt-14 px-14 py-3 text-white text-lg tracking-wide bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
-              Read More
+              {content.ButtonLabel}
             </button>
           </div>
         </div>
@@ -45,6 +45,7 @@ const Intro = ({ content }) => {
       {open && (
         <WelcomeLetter
           content={content.welcomeletter}
+          title={content.Title}
           open={open}
           close={() => setOpen(false)}
         />

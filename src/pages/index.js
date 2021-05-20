@@ -66,8 +66,8 @@ const HomePage = ({ components }) => {
       {open && <Banner hide={hideBanner} />}
       <Hero content={components?.Hero} />
       <Intro content={components?.Welcome} />
-      <ContentCard />
-      <Contact />
+      <ContentCard content={components?.ImageSec} />
+      <Contact content={components?.ContactSec} />
       <Footer />
       {/* <Logos /> */}
       {/* <Features content={components?.Features} /> */}

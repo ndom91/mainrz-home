@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Alert from './Alert'
 
-const Contact = () => {
+const Contact = ({ content }) => {
   const [agbAgree, setAgbAgree] = useState(false)
   const [openSentAlert, setOpenSentAlert] = useState(false)
   const [alert, setAlert] = useState({
@@ -88,13 +88,12 @@ const Contact = () => {
                 rel='noopener noreferrer'
                 className='rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
-                <p className='font-thin leading-relaxed'>
-                  Am Kieswerk 12
-                  <br />
-                  63791 Karlstein am Main
-                  <br />
-                  Germany
-                </p>
+                <p
+                  className='font-thin leading-relaxed'
+                  dangerouslySetInnerHTML={{
+                    __html: content.StreetAddress.replaceAll('\n', '<br />'),
+                  }}
+                />
               </a>
             </div>
             <div className='mt-4 px-6 lg:mt-0 lg:w-1/2'>
@@ -102,12 +101,12 @@ const Contact = () => {
                 EMAIL
               </h2>
               <a
-                href='mailto:marketing@newtelco.de'
+                href={`mailto:${content.EmailAddress}`}
                 className='text-newtelco-500 font-thin leading-relaxed rounded focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                marketing@mainrz.de
+                {content.EmailAddress}
               </a>
               <h2 className='title-font mt-4 text-white text-sm font-medium tracking-widest'>
                 PHONE
@@ -115,28 +114,28 @@ const Contact = () => {
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='tel:00496975002770'
+                href={`tel:${content.PhoneNumber.split(' ').join('')}`}
                 className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
-                +49 69 75 00 27 70
+                {content.PhoneNumber}
               </a>
             </div>
           </div>
         </div>
         <div className='flex flex-col align-bottom mt-8 w-full md:ml-auto md:mt-0 md:pl-8 md:w-1/2 lg:w-1/3'>
           <p className='mb-6 text-center text-gray-400 font-mono text-xl font-thin tracking-widest uppercase'>
-            Receive a free consultation
+            {content.Title}
           </p>
           <p className='mb-5 text-gray-400 font-thin'>
             Call us at{' '}
             <a
               alt='Call Jens Leuchters'
-              href='tel:00496975002770'
+              href={`tel:${content.PhoneNumber.split(' ').join('')}`}
               target='_blank'
               rel='noopener noreferrer'
               className='text-newtelco-500 font-bold rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
-              069 75 00 27 70
+              {content.PhoneNumber}
             </a>{' '}
             or fill out the contact form below and we will get back to you as
             soon as possible!
@@ -238,7 +237,7 @@ const Contact = () => {
                   }}
                   className='px-6 py-3 w-full text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-4'
                 >
-                  Send
+                  {content.ButtonText}
                 </button>
               </div>
             </div>
