@@ -27,7 +27,10 @@ const Hero = ({ content }) => {
             </li>
             <li>Integrating green efficiencies into every aspect</li>
           </ul>
-          <div className='flex items-end justify-center mt-8 w-full md:justify-start'>
+          <p className='font-base mb-2 mt-8 w-full text-gray-500 font-mono text-sm tracking-tight'>
+            {Description}
+          </p>
+          <div className='flex items-end justify-center mt-4 w-full md:justify-start'>
             <a
               alt='Mail MainRZ Marketing'
               href='mailto:marketing@mainrz.de'
@@ -43,9 +46,6 @@ const Hero = ({ content }) => {
               </button>
             </a>
           </div>
-          <p className='mb-8 mt-2 w-full text-gray-500 font-mono text-sm font-extralight tracking-tight'>
-            {Description}
-          </p>
         </div>
         <div className='w-5/6 md:w-1/2 lg:w-full lg:max-w-lg'>
           <img
