@@ -77,9 +77,7 @@ const HomePage = ({ components }) => {
 }
 
 export async function getStaticProps() {
-  // const global = await getStrapiContent('globals')
   const landingComponents = await getStrapiContent('main-rz')
-
   return { props: { components: landingComponents } }
 }
 

@@ -91,7 +91,7 @@ const Contact = ({ content }) => {
                 <p
                   className='font-thin leading-relaxed'
                   dangerouslySetInnerHTML={{
-                    __html: content.StreetAddress.replaceAll('\n', '<br />'),
+                    __html: content?.StreetAddress.replace('\n', '<br />'),
                   }}
                 />
               </a>
@@ -101,12 +101,12 @@ const Contact = ({ content }) => {
                 EMAIL
               </h2>
               <a
-                href={`mailto:${content.EmailAddress}`}
+                href={`mailto:${content?.EmailAddress}`}
                 className='text-newtelco-500 font-thin leading-relaxed rounded focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                {content.EmailAddress}
+                {content?.EmailAddress}
               </a>
               <h2 className='title-font mt-4 text-white text-sm font-medium tracking-widest'>
                 PHONE
@@ -114,28 +114,28 @@ const Contact = ({ content }) => {
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href={`tel:${content.PhoneNumber.split(' ').join('')}`}
+                href={`tel:${content?.PhoneNumber.split(' ').join('')}`}
                 className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
-                {content.PhoneNumber}
+                {content?.PhoneNumber}
               </a>
             </div>
           </div>
         </div>
         <div className='flex flex-col align-bottom mt-8 w-full md:ml-auto md:mt-0 md:pl-8 md:w-1/2 lg:w-1/3'>
           <p className='mb-6 text-center text-gray-400 font-mono text-xl font-thin tracking-widest uppercase'>
-            {content.Title}
+            {content?.Title}
           </p>
           <p className='mb-5 text-gray-400 font-thin'>
             Call us at{' '}
             <a
               alt='Call Jens Leuchters'
-              href={`tel:${content.PhoneNumber.split(' ').join('')}`}
+              href={`tel:${content?.PhoneNumber.split(' ').join('')}`}
               target='_blank'
               rel='noopener noreferrer'
               className='text-newtelco-500 font-bold rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
-              {content.PhoneNumber}
+              {content?.PhoneNumber}
             </a>{' '}
             or fill out the contact form below and we will get back to you as
             soon as possible!
@@ -237,7 +237,7 @@ const Contact = ({ content }) => {
                   }}
                   className='px-6 py-3 w-full text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-4'
                 >
-                  {content.ButtonText}
+                  {content?.ButtonText}
                 </button>
               </div>
             </div>

@@ -6,7 +6,7 @@ const ContentCard = ({ content }) => {
       <div className='flex flex-col max-w-screen-lg bg-gray-900 rounded-lg shadow-2xl overflow-hidden sm:mx-auto lg:flex-row'>
         <div className='relative lg:w-1/2'>
           <img
-            src={`https://cms.mainrz.de${content.Picture.url}`}
+            src={`https://cms.mainrz.de${content?.Picture.url}`}
             alt='Datacenter workers on computer.'
             className='w-full h-80 object-cover object-right grayscale-0 lg:absolute lg:h-full'
           />
@@ -21,13 +21,13 @@ const ContentCard = ({ content }) => {
         <div className='flex flex-col justify-center p-8 bg-gray-900 lg:p-16 lg:pl-10 lg:w-1/2'>
           <div>
             <p className='bg-newtelco-200 inline-block mb-4 px-3 py-1 text-newtelco-600 text-xs font-medium tracking-wider rounded-full uppercase'>
-              {content.BadgeText}
+              {content?.BadgeText}
             </p>
           </div>
           <h5 className='mb-3 text-white font-mono text-3xl font-bold tracking-tighter leading-none sm:text-4xl'>
-            {content.Title}
+            {content?.Title}
           </h5>
-          <p className='mb-5 py-5 text-gray-400'>{content.BodyText}</p>
+          <p className='mb-5 py-5 text-gray-400'>{content?.BodyText}</p>
           {/* <div className='flex items-center'>
             <button
               type='submit'
