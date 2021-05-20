@@ -18,7 +18,7 @@ const ContentCard = ({ content }) => {
   }, [controls, intersection])
 
   return (
-    <div className='mx-auto my-24 px-4 py-12 sm:max-w-xl md:px-24 md:max-w-full lg:px-8 lg:py-16 lg:max-w-screen-xl'>
+    <div className='mx-auto my-48 px-4 py-12 sm:max-w-xl md:px-24 md:max-w-full lg:px-8 lg:py-16 lg:max-w-screen-xl'>
       <motion.div
         ref={cardRef}
         animate={controls}

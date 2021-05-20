@@ -64,6 +64,9 @@ module.exports = {
           900: '#0d0d0d',
         },
       },
+      height: {
+        120: '38rem',
+      },
       width: {
         130: '130vw',
         120: '120%',
