@@ -51,7 +51,7 @@ const Hero = ({ content }) => {
           <img
             className='rounded object-cover object-center'
             alt='hero'
-            src='https://dummyimage.com/720x600'
+            src='/img/absurd_2.png'
           />
         </div>
       </div>
