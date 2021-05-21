@@ -1,10 +1,9 @@
-export default function handler(req, res) {
-  return new Promise((resolve, reject) => {
-    const { name, service, contact } = req.body
+export default async function handler(req, res) {
+  const { name, service, contact } = req.body
+  const notionApi = 'https://api.notion.com/v1/pages'
 
-    const notionApi = 'https://api.notion.com/v1/pages'
-
-    fetch(notionApi, {
+  try {
+    const data = await fetch(notionApi, {
       method: 'post',
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_KEY}`,
@@ -43,14 +42,8 @@ export default function handler(req, res) {
         },
       }),
     })
-      .then(res => res.json())
-      .then(data => {
-        res.status(200).json({ data }).end()
-        resolve()
-      })
-      .catch(err => {
-        res.status(500).json({ err }).end()
-        reject()
-      })
-  })
+    return res.status(200).json({ data }).end()
+  } catch (err) {
+    return res.status(500).json({ err }).end()
+  }
 }
