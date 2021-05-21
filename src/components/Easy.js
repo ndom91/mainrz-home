@@ -62,7 +62,7 @@ const Easy = () => {
           transition={{ duration: 1 }}
           variants={header}
           className='mb-32 text-center text-xl font-thin sm:text-2xl'
-        >{`MainRZ can help you business get connected, here's how`}</motion.p>
+        >{`MainRZ can help your business get connected, here's how`}</motion.p>
         <motion.div
           initial='hidden'
           animate={controls}

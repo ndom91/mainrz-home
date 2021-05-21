@@ -50,6 +50,7 @@ html::-webkit-scrollbar {
 }
 
 /* Track */
+.typeform-width *::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track,
 .hidden-scroller::-webkit-scrollbar-track {
   border-radius: 100vh;
@@ -57,6 +58,7 @@ html::-webkit-scrollbar-track,
 }
 
 /* Handle */
+.typeform-width *::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb,
 .hidden-scroller::-webkit-scrollbar-thumb {
   background: #6a69691b;
@@ -68,6 +70,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* Handle on hover */
+.typeform-width *::-webkit-scrollbar-thumb,
 .hidden-scroller::-webkit-scrollbar-thumb:hover {
   background: #7f7e7e4b;
   cursor: pointer;
