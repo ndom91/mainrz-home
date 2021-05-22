@@ -80,9 +80,7 @@ const WelcomeLetter = ({ content, title, open, close }) => {
             >
               {title}
             </h1>
-            <p className='text-gray-500 text-base font-thin'>
-              May 19, 2021 — by Jens Leuchters
-            </p>
+            <p className='text-gray-500 text-base font-thin'>May 19, 2021</p>
           </div>
           <div className='flex items-center mb-6 space-x-2'>
             <p className='text-gray-300 font-thin'>Share this</p>

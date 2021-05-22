@@ -8,7 +8,7 @@ const Faq = () => {
   const intersection = useIntersection(FaqRef, {
     root: null,
     rootMargin: '0px',
-    threshold: 1,
+    threshold: 0.5,
   })
 
   useEffect(() => {
@@ -21,7 +21,6 @@ const Faq = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
         when: 'beforeChildren',
         staggerChildren: 0.2,
       },

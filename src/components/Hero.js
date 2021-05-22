@@ -33,10 +33,15 @@ const Hero = ({ content }) => {
           animate='visible'
           variants={item}
           transition={{ duration: 1 }}
-          className='flex flex-col items-start mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-20'
+          className='flex flex-col items-start mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-6'
         >
-          <p className='text-newtelco-900 inline-block self-start mb-8 px-3 py-1 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
+          <p className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-3 py-2 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
             {content.HeroBadge}
+            <img
+              src='/img/nt-grey.png'
+              width='100'
+              className='inline ml-2 mt-0.5 h-3'
+            />
           </p>
           <Image
             src='/img/mainrz-logo.png'
@@ -83,12 +88,12 @@ const Hero = ({ content }) => {
             visible: { opacity: 1 },
             hidden: { opacity: 0 },
           }}
-          className='w-5/6 md:w-1/2 lg:w-full lg:max-w-lg'
+          className='w-5/6 md:w-2/3 lg:w-full lg:max-w-xl'
         >
           <img
             className='hidden rounded object-cover object-center md:inline-block'
             alt='hero'
-            src='/img/absurd_2.png'
+            src='/img/hero.svg'
           />
         </motion.div>
       </div>
