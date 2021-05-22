@@ -27,7 +27,7 @@ const Hero = ({ content }) => {
 
   return (
     <main className='font-montserrat'>
-      <div className='container flex flex-col items-center mx-auto px-5 py-24 md:flex-row'>
+      <div className='container relative z-10 flex flex-col items-center mx-auto px-5 py-24 md:flex-row'>
         <motion.div
           initial='hidden'
           animate='visible'
@@ -36,12 +36,12 @@ const Hero = ({ content }) => {
           className='flex flex-col items-start mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-6'
         >
           <p className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-3 py-2 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
-            {content.HeroBadge}
-            <img
+            {content.HeroBadge} Newtelco
+            {/* <img
               src='/img/nt-grey.png'
               width='100'
               className='inline ml-2 mt-0.5 h-3'
-            />
+            /> */}
           </p>
           <Image
             src='/img/mainrz-logo.png'
@@ -97,7 +97,7 @@ const Hero = ({ content }) => {
           />
         </motion.div>
       </div>
-      <div className='flex justify-center mt-12'>
+      <div className='relative z-10 flex justify-center mt-12'>
         <motion.a whileHover={{ scale: 1.2, y: -10 }} href='#letter'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -115,6 +115,17 @@ const Hero = ({ content }) => {
           </svg>
         </motion.a>
       </div>
+      <svg
+        viewBox='0 0 200 200'
+        xmlns='http://www.w3.org/2000/svg'
+        className='h-140 absolute z-0 -right-36 -top-28 opacity-20'
+      >
+        <path
+          fill='#CCCCCC'
+          d='M30.9,-52.3C37.3,-49.8,37.9,-36,44.7,-25.4C51.5,-14.8,64.5,-7.4,68.9,2.5C73.4,12.5,69.2,25,63.7,37.9C58.2,50.7,51.3,63.8,40.5,71.9C29.6,79.9,14.8,82.9,3.9,76.1C-6.9,69.3,-13.9,52.6,-18.7,41.1C-23.5,29.6,-26.3,23.2,-37.9,17.2C-49.5,11.2,-70,5.6,-74.1,-2.3C-78.1,-10.2,-65.6,-20.5,-54.2,-26.8C-42.7,-33.1,-32.3,-35.4,-23.4,-36.5C-14.6,-37.5,-7.3,-37.1,2.5,-41.4C12.2,-45.7,24.5,-54.7,30.9,-52.3Z'
+          transform='translate(100 100)'
+        />
+      </svg>
     </main>
   )
 }
