@@ -42,6 +42,7 @@ export default async function handler(req, res) {
         },
       }),
     })
+    console.log(JSON.stringify(req.body, null, 2))
     const data = await notionRes.json()
     return res.status(200).json({ data })
   } catch (err) {
