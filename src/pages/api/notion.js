@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   const notionApi = 'https://api.notion.com/v1/pages'
 
   try {
-    const res = await fetch(notionApi, {
+    const notionRes = await fetch(notionApi, {
       method: 'post',
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_KEY}`,
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
         },
       }),
     })
-    const data = await res.json()
+    const data = await notionRes.json()
     return res.status(200).json({ data })
   } catch (err) {
     return res.status(500).json({ err })
