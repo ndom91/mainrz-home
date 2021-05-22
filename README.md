@@ -26,7 +26,7 @@ Then you can open [http://localhost:3000](http://localhost:3000) to visit the pa
 
 ## 📺 Screenshot
 
-![Screenshot](screenshot.png)
+![Screenshot](https://i.imgur.com/gEyuIRB.png)
 
 ## 📝 License
 
