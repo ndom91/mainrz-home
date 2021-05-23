@@ -85,7 +85,9 @@ const WelcomeLetter = ({ content, title, open, close }) => {
           <div className='flex items-center mb-6 space-x-2'>
             <p className='text-gray-300 font-thin'>Share this</p>
             <a
-              href='#'
+              href='https://www.facebook.com/sharer/sharer.php?u=https%3A//mainrz.de'
+              target='_blank'
+              rel='noopener noreferrer'
               className='text-newtelco-500 hover:text-newtelco-600 transition-colors duration-300 ease-in-out'
             >
               <svg
@@ -100,7 +102,9 @@ const WelcomeLetter = ({ content, title, open, close }) => {
               </svg>
             </a>
             <a
-              href='#'
+              href='https://twitter.com/intent/tweet?text=MainRZ%20is%20launching%20in%20Karlstein%20(near%20Frankfurt)!%20https%3A//mainrz.de%0A%0A%23datacenter%20%23rechenzentrum%20%23dc'
+              target='_blank'
+              rel='noopener noreferrer'
               className='text-newtelco-500 hover:text-newtelco-600 transition-colors duration-300 ease-in-out'
             >
               <svg
@@ -115,7 +119,9 @@ const WelcomeLetter = ({ content, title, open, close }) => {
               </svg>
             </a>
             <a
-              href='#'
+              href='https://www.linkedin.com/shareArticle?mini=true&url=https%3A//mainrz.de&title=MainRZ%20-%20Powered%20by%20NewTelco&summary=MainRZ%20is%20launching%20in%20Karlstein%20(near%20Frankfurt)!&source='
+              target='_blank'
+              rel='noopener noreferrer'
               className='text-newtelco-500 hover:text-newtelco-600 transition-colors duration-300 ease-in-out'
             >
               <svg

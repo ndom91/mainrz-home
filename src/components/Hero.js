@@ -68,7 +68,7 @@ const Hero = ({ content }) => {
               alt='Mail MainRZ Marketing'
               href='mailto:marketing@mainrz.de'
               target='_blank'
-              rel='noopener noreferer noreferrer'
+              rel='noopener noreferrer'
               className='rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-4'
             >
               <button
