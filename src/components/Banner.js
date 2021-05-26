@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = ({ hide }) => {
   return (
-    <div className='absolute top-0 w-full bg-newtelco-500'>
+    <div className='absolute z-10 top-0 w-full bg-newtelco-500'>
       <div className='mx-auto px-3 py-3 max-w-7xl sm:px-6 lg:px-8'>
         <div className='flex flex-wrap items-center justify-between'>
           <div className='flex flex-1 items-center w-0'>
