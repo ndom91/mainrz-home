@@ -5,12 +5,12 @@ import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
-import ContentCard from '@/components/ContentCard'
 import Intro from '@/components/CompanyIntro'
 import Easy from '@/components/Easy'
 import Faq from '@/components/Faq'
 import { getStrapiContent } from '@/lib/strapi'
 import { useCookie } from 'react-use'
+// import ContentCard from '@/components/ContentCard'
 // import Features from '@/components/Features'
 // import Steps from '@/components/Steps'
 // import Logos from '@/components/Logos'
@@ -68,7 +68,7 @@ const HomePage = ({ components }) => {
       {open && <Banner hide={hideBanner} />}
       <Hero content={components?.Hero} />
       <Intro content={components?.Welcome} />
-      <ContentCard content={components?.ImageSec} />
+      {/* <ContentCard content={components?.ImageSec} /> */}
       <Easy />
       <Faq />
       <Contact content={components?.ContactSec} />
