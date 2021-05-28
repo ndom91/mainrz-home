@@ -35,14 +35,19 @@ const Hero = ({ content }) => {
           transition={{ duration: 1 }}
           className='flex flex-col items-start mb-16 text-center md:items-start md:mb-0 md:pr-16 md:w-1/2 md:text-left lg:flex-grow lg:pr-6'
         >
-          <p className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-3 py-2 text-sm font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'>
+          <a
+            href='https://newtelco.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-3 py-2 text-sm font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'
+          >
             {content.HeroBadge}
             <img
               src='/img/nt-grey.png'
               width='120'
               className='inline ml-2 mt-0.5 h-4'
             />
-          </p>
+          </a>
           <Image
             src='/img/mainrz-logo.png'
             width='500'
