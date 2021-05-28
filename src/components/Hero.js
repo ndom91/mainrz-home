@@ -39,13 +39,13 @@ const Hero = ({ content }) => {
             href='https://newtelco.com'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-3 py-2 text-sm font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'
+            className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-2.5 py-1.5 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'
           >
             {content.HeroBadge}
             <img
               src='/img/nt-grey.png'
-              width='120'
-              className='inline ml-2 mt-0.5 h-4'
+              width='100'
+              className='inline ml-2 mt-0.5 h-3'
             />
           </a>
           <Image
