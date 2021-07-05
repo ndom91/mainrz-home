@@ -202,9 +202,9 @@ const Contact = ({ content }) => {
   }, [])
 
   return (
-    <section className='body-font relative text-gray-500 lg:mt-36'>
-      <div className='sm:flex-no-wrap container flex flex-wrap mx-auto pb-24 pt-12 px-5 md:py-24'>
-        <div className='relative flex items-end justify-start mx-8 p-10 w-full h-96 bg-gray-900 rounded-lg overflow-hidden md:mx-0 md:w-1/2 md:h-auto lg:w-2/3'>
+    <section className='relative text-gray-500 body-font lg:mt-36'>
+      <div className='container flex flex-wrap px-5 pt-12 pb-24 mx-auto sm:flex-no-wrap md:py-24'>
+        <div className='relative flex items-end justify-start w-full p-10 mx-8 overflow-hidden bg-gray-900 rounded-lg h-96 md:mx-0 md:w-1/2 md:h-auto lg:w-2/3'>
           <iframe
             width='100%'
             height='100%'
@@ -220,14 +220,14 @@ const Contact = ({ content }) => {
           ></iframe>
           <div className='relative flex flex-wrap py-6 bg-gray-900 rounded-md lg:w-2/3'>
             <div className='px-6 lg:w-1/2'>
-              <h2 className='title-font text-white text-sm font-medium tracking-widest'>
+              <h2 className='text-sm font-medium tracking-widest text-white title-font'>
                 ADDRESS
               </h2>
               <a
-                href='https://g.page/Newtelco?share'
+                href='https://www.google.com/maps/place/Am+Kieswerk+8-12,+63791+Karlstein+am+Main/@50.05073,9.0293113,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd3ef04c42f9ed:0x8ff54f130955ae31!8m2!3d50.05073!4d9.0315'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                className='transition-shadow duration-500 rounded outline-none focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
                 <p
                   className='font-thin leading-relaxed'
@@ -237,37 +237,37 @@ const Contact = ({ content }) => {
                 />
               </a>
             </div>
-            <div className='mt-4 px-6 lg:mt-0 lg:w-1/2'>
-              <h2 className='title-font text-white text-sm font-medium tracking-widest'>
+            <div className='px-6 mt-4 lg:mt-0 lg:w-1/2'>
+              <h2 className='text-sm font-medium tracking-widest text-white title-font'>
                 EMAIL
               </h2>
               <a
                 href={`mailto:${content?.EmailAddress}`}
-                className='text-newtelco-500 font-thin leading-relaxed rounded focus:outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                className='font-thin leading-relaxed transition-shadow duration-500 rounded text-newtelco-500 focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 {content?.EmailAddress}
               </a>
-              <h2 className='title-font mt-4 text-white text-sm font-medium tracking-widest'>
+              <h2 className='mt-4 text-sm font-medium tracking-widest text-white title-font'>
                 PHONE
               </h2>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
                 href={`tel:${content?.PhoneNumber.split(' ').join('')}`}
-                className='font-thin rounded focus:outline-none outline-none transition-shadow duration-500 focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
+                className='font-thin transition-shadow duration-500 rounded outline-none focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
                 {content?.PhoneNumber}
               </a>
             </div>
           </div>
         </div>
-        <div className='flex flex-col align-bottom mt-8 px-8 w-full md:ml-auto md:mt-0 md:pl-8 md:px-0 md:w-1/2 lg:w-1/3'>
+        <div className='flex flex-col w-full px-8 mt-8 align-bottom md:ml-auto md:mt-0 md:pl-8 md:px-0 md:w-1/2 lg:w-1/3'>
           <div
             ref={container}
             style={{ height: '800px', width: '400px' }}
-            className='p-12 bg-gray-800 bg-opacity-40 rounded-xl overflow-hidden'
+            className='p-12 overflow-hidden bg-gray-800 bg-opacity-40 rounded-xl'
           />
         </div>
       </div>
