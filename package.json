@@ -42,6 +42,6 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.js": "next lint"
+    "*.js": "next lint --fix"
   }
 }
