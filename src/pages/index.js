@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import SEO from '@/components/SEO'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import Contact from '@/components/Contact'
+// import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 import Intro from '@/components/CompanyIntro'
 import Easy from '@/components/Easy'
 import Faq from '@/components/Faq'
 import { useCookie } from 'react-use'
+
+const Contact = dynamic(() => import('@/components/Contact'), {
+  ssr: false,
+})
 
 const HomePage = () => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
