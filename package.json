@@ -21,7 +21,7 @@
     "react-use": "^17.3.1",
     "styled-components": "^5.3.3",
     "tripetto-runner-autoscroll": "^4.0.2",
-    "tripetto-runner-foundation": "^6.2.5"
+    "tripetto-runner-foundation": "^5.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
