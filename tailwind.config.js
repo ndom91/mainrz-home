@@ -1,9 +1,5 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    standardFontWeights: true,
-  },
+  mode: 'jit',
   purge: ['./src/**/*.js', './src/**/*.jsx'],
   theme: {
     extend: {

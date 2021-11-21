@@ -60,14 +60,10 @@ const Hero = () => {
             animate='visible'
             className='hero-markers space-y flex flex-col items-start justify-center mt-8 w-full text-left text-gray-400 font-mono text-sm font-light tracking-tight list-inside list-disc md:text-base'
           >
-            <motion.li variants={item}>Located just upstream from the internationally renowned telecom hub
-</motion.li>
-            <motion.li variants={item}>Meeting Tier 4/VK 4 requirements for power and connectivity
-</motion.li>
-            <motion.li variants={item}>Top-quality connectivity for local businesses and global players
-</motion.li>
-            <motion.li variants={item}>Integrating green efficiencies into every aspect
-</motion.li>
+            <motion.li variants={item}>Located just upstream from the internationally renowned telecom hub </motion.li>
+            <motion.li variants={item}>Meeting Tier 4/VK 4 requirements for power and connectivity </motion.li>
+            <motion.li variants={item}>Top-quality connectivity for local businesses and global players </motion.li>
+            <motion.li variants={item}>Integrating green efficiencies into every aspect </motion.li>
           </motion.ul>
           <p className='font-base text-md mb-2 mt-8 w-full text-gray-500 font-mono tracking-tight'>
             Ask your questions, or even book a space right now!
@@ -127,7 +123,7 @@ const Hero = () => {
       <svg
         viewBox='0 0 200 200'
         xmlns='http://www.w3.org/2000/svg'
-        className='h-140 absolute z-0 -right-36 -top-28 opacity-20'
+        className='h-140 absolute z-0 left-[45vw] -top-28 opacity-20'
       >
         <path
           fill='#CCCCCC'
