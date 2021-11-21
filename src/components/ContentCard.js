@@ -54,14 +54,6 @@ const ContentCard = ({ content }) => {
             {content?.Title}
           </h5>
           <p className='mb-5 py-5 text-gray-400'>{content?.BodyText}</p>
-          {/* <div className='flex items-center'>
-            <button
-              type='submit'
-              className='focus:shadow-outline inline-flex items-center justify-center mr-6 px-6 h-12 text-white font-medium tracking-wide bg-newtelco-500 hover:bg-newtelco-600 rounded focus:outline-none transition duration-500'
-            >
-              Get started
-            </button>
-          </div> */}
         </div>
       </motion.div>
     </div>

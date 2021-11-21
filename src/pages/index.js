@@ -8,14 +8,9 @@ import Banner from '@/components/Banner'
 import Intro from '@/components/CompanyIntro'
 import Easy from '@/components/Easy'
 import Faq from '@/components/Faq'
-import { getStrapiContent } from '@/lib/strapi'
 import { useCookie } from 'react-use'
-// import ContentCard from '@/components/ContentCard'
-// import Features from '@/components/Features'
-// import Steps from '@/components/Steps'
-// import Logos from '@/components/Logos'
 
-const HomePage = ({ components }) => {
+const HomePage = () => {
   const [value, updateCookie] = useCookie('gdpr-banner-dev')
   const [open, setOpen] = useState(false)
 
@@ -66,23 +61,14 @@ const HomePage = ({ components }) => {
       <SEO title='MainRZ' />
       <Header />
       {open && <Banner hide={hideBanner} />}
-      <Hero content={components?.Hero} />
-      <Intro content={components?.Welcome} />
-      {/* <ContentCard content={components?.ImageSec} /> */}
+      <Hero />
+      <Intro />
       <Easy />
       <Faq />
-      <Contact content={components?.ContactSec} />
+      <Contact />
       <Footer />
-      {/* <Logos /> */}
-      {/* <Features content={components?.Features} /> */}
-      {/* <Steps /> */}
     </>
   )
-}
-
-export async function getStaticProps() {
-  const landingComponents = await getStrapiContent('main-rz')
-  return { props: { components: landingComponents } }
 }
 
 export default HomePage

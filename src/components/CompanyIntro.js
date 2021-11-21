@@ -2,13 +2,9 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import WelcomeLetter from './WelcomeLetter'
 
-const Intro = ({ content }) => {
+const Intro = () => {
   const [open, setOpen] = useState(false)
 
-  const Letter = content.welcomeletter
-    .split('\n\n')
-    .splice(0, 2)
-    .join('<br /><br />')
 
   return (
     <section id='letter' className='body-font mt-36 text-gray-400 lg:mb-36'>
@@ -27,19 +23,18 @@ const Intro = ({ content }) => {
               Announcement Letter
             </span>
           </div>
-          <p
-            className='text-left text-lg font-thin leading-relaxed'
-            dangerouslySetInnerHTML={{
-              __html: Letter,
-            }}
-          />
+          <p className='text-left text-lg font-thin leading-relaxed' >
+          NewTelco is pleased to announce their plans for a pioneering new data center set to open in the second half of 2022. Located in Karlstein am Main, close to the international telecom hub of Frankfurt am Main, the new data center will serve global players needing an additional presence in the heart of the EU, as well as businesses in Germany.
+
+NewTelco’s Managing Director Jens Leuchters explains the reasoning behind the choice for Karlstein: “As our colocation business continues to grow, it only makes sense to invest in a larger, more advanced data center to add to our current capacity in Frankfurt. Karlstein is the ideal location, close enough to Frankfurt to ensure top quality connectivity, but also allowing us to expand our services to reach new target groups.”
+          </p>
           <div className='flex justify-center'>
             <motion.button
               whileHover={{ scale: 1.1 }}
               onClick={() => setOpen(true)}
               className='flex mt-14 px-14 py-3 text-white text-lg tracking-wide bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded focus:outline-none outline-none transition-all duration-500 focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4'
             >
-              {content.ButtonLabel}
+              Read More
             </motion.button>
           </div>
         </div>
@@ -47,8 +42,6 @@ const Intro = ({ content }) => {
       <AnimatePresence>
         {open && (
           <WelcomeLetter
-            content={content.welcomeletter}
-            title={content.Title}
             open={open}
             close={() => setOpen(false)}
           />

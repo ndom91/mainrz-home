@@ -35,7 +35,7 @@ const SEO = ({ title }) => {
       <meta name="theme-color" content="#333333"></meta>
       <meta
         name="description"
-        content="NewTelco GmbH - HR Radio Campaign"
+        content="MainRZ - Powered by NewTelco GmbH"
       ></meta>
     </Head>
   )

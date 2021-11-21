@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { run } from 'tripetto-runner-autoscroll'
 import { Export } from 'tripetto-runner-foundation'
 
-const Contact = ({ content }) => {
+const Contact = () => {
   const container = useRef()
 
   useEffect(() => {
@@ -231,10 +231,10 @@ const Contact = ({ content }) => {
               >
                 <p
                   className='font-thin leading-relaxed'
-                  dangerouslySetInnerHTML={{
-                    __html: content?.StreetAddress.replace('\n', '<br />'),
-                  }}
-                />
+                >
+                Am Kieswerk 12
+63791 Karlstein am Main Germany
+                </p>
               </a>
             </div>
             <div className='px-6 mt-4 lg:mt-0 lg:w-1/2'>
@@ -242,12 +242,12 @@ const Contact = ({ content }) => {
                 EMAIL
               </h2>
               <a
-                href={`mailto:${content?.EmailAddress}`}
+                href={`mailto:marketing@mainrz.de`}
                 className='font-thin leading-relaxed transition-shadow duration-500 rounded text-newtelco-500 focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                {content?.EmailAddress}
+                marketing@mainrz.de
               </a>
               <h2 className='mt-4 text-sm font-medium tracking-widest text-white title-font'>
                 PHONE
@@ -255,10 +255,10 @@ const Contact = ({ content }) => {
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href={`tel:${content?.PhoneNumber.split(' ').join('')}`}
+                href={`tel:00496975002770`}
                 className='font-thin transition-shadow duration-500 rounded outline-none focus:outline-none focus:ring-newtelco-500 focus:ring-opacity-50 focus:ring-2'
               >
-                {content?.PhoneNumber}
+                +49 69 75 00 27 70
               </a>
             </div>
           </div>

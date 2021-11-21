@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const Hero = ({ content }) => {
+const Hero = () => {
   const list = {
     visible: {
       opacity: 1,
@@ -41,7 +41,7 @@ const Hero = ({ content }) => {
             rel='noopener noreferrer'
             className='text-newtelco-900 flex self-start justify-center align-middle mb-8 px-2.5 py-1.5 text-xs font-medium tracking-wider bg-newtelco-500 rounded-full uppercase'
           >
-            {content.HeroBadge}
+            Powered By
             <img
               src='/img/nt-grey.png'
               width='100'
@@ -52,7 +52,7 @@ const Hero = ({ content }) => {
             src='/img/mainrz-logo.png'
             width='500'
             height='94'
-            alt={content.Title}
+            alt='MainRZ Logo'
           />
           <motion.ul
             variants={list}
@@ -60,13 +60,17 @@ const Hero = ({ content }) => {
             animate='visible'
             className='hero-markers space-y flex flex-col items-start justify-center mt-8 w-full text-left text-gray-400 font-mono text-sm font-light tracking-tight list-inside list-disc md:text-base'
           >
-            <motion.li variants={item}>{content.Checklist.Item1}</motion.li>
-            <motion.li variants={item}>{content.Checklist.Item2}</motion.li>
-            <motion.li variants={item}>{content.Checklist.Item3}</motion.li>
-            <motion.li variants={item}>{content.Checklist.Item4}</motion.li>
+            <motion.li variants={item}>Located just upstream from the internationally renowned telecom hub
+</motion.li>
+            <motion.li variants={item}>Meeting Tier 4/VK 4 requirements for power and connectivity
+</motion.li>
+            <motion.li variants={item}>Top-quality connectivity for local businesses and global players
+</motion.li>
+            <motion.li variants={item}>Integrating green efficiencies into every aspect
+</motion.li>
           </motion.ul>
           <p className='font-base text-md mb-2 mt-8 w-full text-gray-500 font-mono tracking-tight'>
-            {content.CallToAction}
+            Ask your questions, or even book a space right now!
           </p>
           <div className='flex items-end justify-center mt-4 w-full md:justify-start'>
             <a
@@ -80,7 +84,7 @@ const Hero = ({ content }) => {
                 tabIndex='-1'
                 className='inline-flex px-10 py-2 text-white text-lg bg-newtelco-500 hover:bg-newtelco-600 border-0 rounded transition-colors duration-500 ease-in-out'
               >
-                {content.CallToActionButton}
+                Contact Us
               </button>
             </a>
           </div>

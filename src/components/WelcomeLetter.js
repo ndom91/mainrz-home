@@ -3,8 +3,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useKey, useClickAway, useLockBodyScroll } from 'react-use'
 
-const WelcomeLetter = ({ content, title, open, close }) => {
-  const Letter = content.replace(/\n/g, '<br />')
+const WelcomeLetter = ({ open, close }) => {
   const ref = useRef(null)
   useLockBodyScroll(open)
   // Click outside to close
@@ -76,9 +75,9 @@ const WelcomeLetter = ({ content, title, open, close }) => {
             <h1
               className='mb-3 text-newtelco-500 text-3xl font-bold md:text-4xl md:leading-tight'
               itemProp='headline'
-              title='Rise of Tailwind - A Utility First CSS Framework'
+              title='MainRZ - Powered by NewTelco'
             >
-              {title}
+              MainRZ - Powered by NewTelco
             </h1>
             <p className='text-gray-500 text-base font-thin'>May 19, 2021</p>
           </div>
@@ -152,8 +151,19 @@ const WelcomeLetter = ({ content, title, open, close }) => {
         <div className='prose mx-auto w-full max-w-2xl md:w-3/4 lg:w-2/3'>
           <p
             className='mx-auto font-sans font-light'
-            dangerouslySetInnerHTML={{ __html: Letter }}
-          />
+          >
+          NewTelco is pleased to announce their plans for a pioneering new data center set to open in the second half of 2022. Located in Karlstein am Main, close to the international telecom hub of Frankfurt am Main, the new data center will serve global players needing an additional presence in the heart of the EU, as well as businesses in Germany.
+
+NewTelco’s Managing Director Jens Leuchters explains the reasoning behind the choice for Karlstein: “As our colocation business continues to grow, it only makes sense to invest in a larger, more advanced data center to add to our current capacity in Frankfurt. Karlstein is the ideal location, close enough to Frankfurt to ensure top quality connectivity, but also allowing us to expand our services to reach new target groups.”
+
+What really sets NewTelco apart is, in fact, their commitment to top-notch service. While NewTelco is an established entity in Germany, founded in 2005 in Frankfurt am Main, the company is still flexible enough to be fully focused on its customers’ needs, whether it’s equipment housing, data warehouse services, high-speed carrier connectivity or an all-inclusive, no- frills managed storage solution. Trained specialists are available 24/7 to assist on site, wherever customers need them – a big plus that has earned NewTelco a solid reputation as a partner to businesses of all sizes.
+
+“One of the most exciting things about Main RZ specifically,” Leuchters emphasizes, “is how we are integrating visionary efficiencies right from the beginning. This starts with having two independent sources of electricity at 5 MW, including our own dedicated photovoltaic system, as well as a concept for using the heat we produce in collaboration with the local community. Our goal is to be as green as possible in alignment with Tier 4/VK 4 requirements for power and telecommunication connectivity. That’s something not many telecom players can currently claim.”
+
+This clear commitment to the environment helps guide many of the considerations going into the development of Main RZ, from the choice of air-conditioning to the kind of electrical cabling used. While expensive to implement, these efficiencies will eventually help drive down the data center’s daily operating costs, an advantage that customers will also profit from.
+
+If you’re interested in learning more about NewTelco or Main RZ, please do not hesitate to get in touch.
+          </p>
         </div>
       </motion.article>
     </motion.div>

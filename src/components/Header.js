@@ -12,23 +12,6 @@ const Header = () => {
           <span className='ml-3 text-xl font-thin'>MainRZ</span>
         </a>
         <nav className='flex flex-wrap items-center justify-center text-base md:ml-auto'></nav>
-        {/* <button className='text-light inline-flex items-center mt-4 px-3 py-1 text-white font-medium hover:bg-newtelco-500 border hover:border-newtelco-500 border-white rounded focus:outline-none outline-none transition-all duration-500 ease-in-out focus:ring-newtelco-500 focus:ring-opacity-30 focus:ring-4 md:inline-flex md:mt-0'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke='currentColor'
-            className='mr-2 w-4 h-4'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
-            />
-          </svg>
-          Home
-        </button> */}
       </div>
     </header>
   )
